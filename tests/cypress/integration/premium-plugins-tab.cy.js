@@ -17,7 +17,7 @@ describe('Plugins Premium Tab', () => {
     it('Premium tab exist', () => {
         cy.get('.wrap')
             .find('.nfd-premium-plugins-marketplace')
-            .contains('Unlock the full potential of your WordPress website with premium plugins from Web')
+            .contains('Unlock the full potential of your WordPress website with premium plugins')
             .should('be.visible');
     });
 
