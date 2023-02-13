@@ -3,13 +3,13 @@
 describe('Help Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=web#/help');
+		cy.visit('/wp-admin/admin.php?page=crazydomains#/help');
 	});
 	
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(500);
-		cy.checkA11y('.wppw-app-body');
+		cy.checkA11y('.wppcd-app-body');
 	});
 
 	it('Email Card Exists', () => {
@@ -36,8 +36,14 @@ describe('Help Page', function () {
 			.should('be.visible');
 	});
 
-	it('KB Card Exists', () => {
-		cy.get('.card-help-kb').contains('h3', 'Knowledge Base')
+	it('Online Support Card Exists', () => {
+		cy.get('.card-help-help').contains('h3', 'Online Support')
+			.scrollIntoView()
+			.should('be.visible');
+	});
+
+	it('Online Academy Card Exists', () => {
+		cy.get('.card-help-academy').contains('h3', 'Online Academy')
 			.scrollIntoView()
 			.should('be.visible');
 	});
