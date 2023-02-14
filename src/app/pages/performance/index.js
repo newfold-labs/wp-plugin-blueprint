@@ -1,5 +1,5 @@
 import './stylesheet.scss';
-import graphicUrl from '../../../../assets/svg/large-star.svg';
+import graphicUrl from '../../../../assets/svg/coming-soon.svg';
 import CacheSettings from './cacheSettings';
 import ClearCache from './clearCache';
 import SettingsCallout from './settingsCallout';
@@ -20,7 +20,7 @@ const Performance = () => {
 							width: '80%',
 							height: 'auto',
 						} }
-						alt={ __( 'Star illustration', 'wp-plugin-crazy-domains' ) }
+						alt={ __( 'Rocket launch illustration', 'wp-plugin-crazy-domains' ) }
 					/>
 				</div>
 			) }

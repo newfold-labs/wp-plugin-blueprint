@@ -1,6 +1,6 @@
 .wppcd-header {
     align-content: center;
-    background: var(--dc-theme-white);
+    background: var(--color-white);
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@
         padding: 2rem 12px;
         border-radius: 0 !important;
         &:focus:not(:disabled) {
-            box-shadow: inset -2px -2px 0px 4px var(--mdc-theme-primary--dark1);
+            box-shadow: inset 0px 0px 0px 1px var(--color-primary);
         }
     }
 }
@@ -39,7 +39,8 @@
     padding: 1.33rem;
     will-change: background-color;
     transition: background-color 0.33s ease;
-    background-color: var(--mdc-theme-primary--dark1);
+    background-color: var(--color-primary);
+    background: linear-gradient(114deg, var(--color-primary) 45%, #639e26 60%, var(--color-primary-dark) 80%);
 }
 
 .wppcd-nav-large {
@@ -59,7 +60,7 @@
     }
     .wppcd-nav-large__link {
         display: inline;
-        color: var(--dc-theme-white) !important;
+        color: var(--color-white) !important;
         cursor: pointer;
         text-decoration: none;
         font-size: 1rem;
@@ -71,7 +72,7 @@
         white-space: nowrap;
         &:after {
             content: '';
-            background-color: var(--dc-theme-white);
+            background-color: var(--color-white);
             margin-top: 5px;
             height: 2px;
             width: 100%;
@@ -98,58 +99,27 @@
 
 
 .wppcd-page {
-    // marketplace and default blue applied in .wppcd-nav
-    &-home {
-        .wppcd-nav {
-            background-color: var(--mdc-theme-secondary);
-        }
-    }
-    &-performance {
-        .wppcd-nav {
-            background-color: var(--dc-theme-qua);
-        }
-    }
-    &-settings {
-        .wppcd-nav {
-            background-color: #EE4C2D;
-        }
-    }
-    &-help {
-        .wppcd-nav {
-            background-color: var(--dc-theme-black);
-        }
-    }
-    /* Black Links */
-    &-home,
-    &-performance {
-        .wppcd-nav-large {
-            .wppcd-nav-large__link {
-                color: var(--dc-theme-black) !important;
-                &:after {
-                    background-color: var(--dc-theme-black) !important;
-                }
-            }
-        }
-    }
+    // marketplace and default green applied in .wppcd-nav
 }
 
 .wppcd-nav-utility {
 
     a {
         text-decoration: none;
+        fill: var(--color-text);
 
         span.dashicon {
-            color: var(--dc-theme-black);
+            color: var(--color-text);
             width: 28px;
             height: 28px;
             font-size: 28px;
         }
 
         &.active {
-            fill: var(--mdc-theme-primary);
+            fill: var(--color-primary);
 
             span.dashicon {
-                color: var(--mdc-theme-primary);
+                color: var(--color-primary);
             }
         }
         &:focus {
@@ -164,11 +134,12 @@ ul.nav-mobile {
     }
     a.components-button.is-secondary {
         padding: 1.5rem 1rem 1.66rem 1rem;
-        color: var(--mdc-theme-primary--dark1);
-        box-shadow: inset -2px -2px 0px 4px var(--mdc-theme-primary--dark1);
+        color: var(--color-text);
+        box-shadow: inset 0px 0px 0px 2px var(--color-text);
         &:hover,
         &:active {
-            box-shadow: inset -2px -2px 0px 4px var(--mdc-theme-primary--dark1);
+            color: var(--color-primary-dark);
+            box-shadow: inset 0px 0px 0px 2px var(--color-primary-dark);
         }
     }
 }

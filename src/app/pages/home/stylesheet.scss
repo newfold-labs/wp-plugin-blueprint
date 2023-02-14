@@ -3,13 +3,14 @@
     position: relative;
 
     .components-card__header {
-        background: var(--dc-theme-black);
+        background: var(--color-off-white);
+        border: 1px solid var(--color-border);
         flex-direction: column;
         @media screen and (min-width: 1132px) {
             flex-direction: row;
         }
         .heading {
-            color: var(--dc-theme-white);
+            color: var(--color-title);
             font-size: 1.5rem;
             margin-bottom: 0 !important; // wp core override
             @media screen and (min-width: 1132px) {
@@ -17,7 +18,7 @@
             }
         }
         p {
-            color: #FEC101;
+            color: var(--color-text);
             font-weight: 700;
             margin-left: 0;
         }
@@ -91,8 +92,8 @@
                 align-items: center;
                 .dashicons, svg {
                     margin-right: 8px;
-                    color: var(--mdc-theme-primary);
-                    fill: var(--mdc-theme-primary);
+                    color: var(--color-primary);
+                    fill: var(--color-primary);
                 }
             }
             @media screen and (max-width: 700px) {

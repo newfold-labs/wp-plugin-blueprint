@@ -1,5 +1,5 @@
 import './stylesheet.scss';
-import graphicUrl from '../../../../assets/svg/large-star.svg';
+import graphicUrl from '../../../../assets/svg/website-content.svg';
 import AutomaticUpdates from './automaticUpdates';
 import ComingSoon from './comingSoon';
 import CommentSettings from './commentSettings';
@@ -18,11 +18,10 @@ const Settings = () => {
 						src={ graphicUrl }
 						style={ {
 							float: 'right',
-							width: '80%',
+							width: '70%',
 							height: 'auto',
-							transform: 'rotate3d(0, 0, 1, 90deg)',
 						} }
-						alt={ __( 'Star illustration', 'wp-plugin-crazy-domains' ) }
+						alt={ __( 'Website building illustration', 'wp-plugin-crazy-domains' ) }
 					/>
 				</div>
 			) }

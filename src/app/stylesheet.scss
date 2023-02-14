@@ -1,66 +1,23 @@
 :root {
-    --mdc-theme-primary: #0D47FB;
-    --mdc-theme-primary--light1: #4A75FC;
-    --mdc-theme-primary--light2: #6E91FD;
-    --mdc-theme-primary--light3: #CFDAFE;
-    --mdc-theme-primary--light4: #E6ECFF;
-    --mdc-theme-primary--dark1: #0A39C9;
-
-    --mdc-theme-secondary: #0BB073;
-    --mdc-theme-secondary--light1: #48C496;
-    --mdc-theme-secondary--light2: #6DD0AB;
-    --mdc-theme-secondary--light3: #CEEFE3;
-    --mdc-theme-secondary--light4: #E6F7F1;
-    --mdc-theme-secondary--dark1: #098D5C;
-
-    --dc-theme-ter: #14C1B3;
-    --dc-theme-ter--light1: #4FD1C6;
-    --dc-theme-ter--light2: #72DAD1;
-    --dc-theme-ter--light3: #D0F3F0;
-    --dc-theme-ter--light4: #E7F9F7;
-    --dc-theme-ter--dark1: #109A8F;
-
-    --dc-theme-qua: #FEC101;
-    --dc-theme-qua--light1: #FED141;
-    --dc-theme-qua--light2: #FEDA67;
-    --dc-theme-qua--light3: #FFF3CC;
-    --dc-theme-qua--light4: #FCF6E9;
-    --dc-theme-qua--dark1: #CB9A01;
-
-    --dc-theme-qui: #CC482E;
-    --dc-theme-qui--light1: #D97662;
-    --dc-theme-qui--light2: #E09182;
-    --dc-theme-qui--light3: #F5DAD5;
-    --dc-theme-qui--light4: #FFF9E5;
-    --dc-theme-qui--dark1: #A33A25;
-
-    --dc-theme-sen: #DF5361;
-    --dc-theme-sen--light1: #E77E89;
-    --dc-theme-sen--light2: #EC98A0;
-    --dc-theme-sen--light3: #F9DDDF;
-    --dc-theme-sen--light4: #FCEDEF;
-    --dc-theme-sen--dark1: #B2424E;
-
-    --dc-theme-black: #000;
-    --dc-theme-grey: #353738;
-    --dc-theme-grey--light1: #55585A;
-    --dc-theme-grey--light2: #AAAFB3;
-    --dc-theme-grey--light3: #D4DBE0;
-    --dc-theme-grey--light4: #F5F7F8;
-    --dc-theme-white: #fff;
-
-    --mdc-theme-error: #ff182f;
-    --mdc-theme-error--light: #ffebea;
-    --mdc-theme-error--dark: #701116;
-
-    --dc-theme-warning: #f2b61b;
-    --dc-theme-warning--light: #fae2af;
-    --dc-theme-warning--dark: #be5a00;
-
-    --dc-theme-success: #23c161;
-    --dc-theme-success--light: #ebf9ed;
-    --dc-theme-success--dark: #034a1d;
-
+    --color-primary: #6FAC2F;
+    --color-primary-dark: #568f1b;
+    --color-primary-light: #D3F0B5;
+    --color-primary-lighter: #E0F5CB;
+    --color-title: #484848;
+    --color-text: #4F595C;
+    --color-link: #00A1EF;
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-canvas: #FDFDFD;
+    --color-grey: #949C9E;
+    --color-dark: #576164;
+    --color-darker: #4F595C;
+    --color-grey-light: #C7CCCF;
+    --color-pink: #E91E63;
+    --color-error: #E83323;
+    --color-error-light: #ffebea;
+    --color-white: #FFFFFF;
+    --color-off-white: #F0F0F5;
+    --color-black: #000000;
 }
 
 html {
@@ -71,14 +28,14 @@ html {
 }
 
 body.toplevel_page_crazydomains {
-    --wp-admin-theme-color: var(--mdc-theme-primary);
-    --wp-admin-theme-color-darker-10: var(--mdc-theme-primary--dark1);
-    --wp-admin-theme-color-darker-20: var(--dc-theme-black);
+    --wp-admin-theme-color: var(--color-primary);
+    --wp-admin-theme-color-darker-10: var(--color-primary-dark);
+    --wp-admin-theme-color-darker-20: var(--color-title);
     --wp-admin-border-width-focus: 2px;
-    --crazydomainsbrand-focus: inset 0 0 0 1px var(--dc-theme-white),0 0 0 var(--wp-admin-border-width-focus) var(--mdc-theme-primary);
+    --crazydomainsbrand-focus: inset 0 0 0 1px var(--color-white),0 0 0 var(--wp-admin-border-width-focus) var(--color-primary);
     
     a {
-        color: var(--mdc-theme-primary);
+        color: var(--color-link);
     }
     
     @media screen and (max-width:782px) {
@@ -87,7 +44,7 @@ body.toplevel_page_crazydomains {
         }
     }
     #wpwrap {
-        background-color: var(--dc-theme-white);
+        background-color: var(--color-canvas);
     }
     #wpcontent {
         padding-left: 0 !important;
@@ -117,25 +74,26 @@ body.toplevel_page_crazydomains {
 
 }
 .wppcd {
-    color: var(--dc-theme-grey);
+    color: var(--color-text);
 
     h1, h2, h3, h4, h5, h6 {
-        color: var(--dc-theme-black);
+        color: var(--color-title);
         font-weight: 700;
     }
     .wppcd-nav a {
-        color: var(--dc-theme-black);
+        color: var(--color-black);
     }
     p, div {
-        color: var(--dc-theme-grey);
+        color: var(--color-text);
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 400;
+        line-height: 1.45;
     }
     .components-card__body .components-toggle-control .components-base-control__field .components-toggle-control__label,
     .components-card__body .components-input-control__label,
     .components-card__body .components-input-control__label *,
     .components-card__body .components-radio-control__option label strong {
-        color: var(--dc-theme-black);
+        color: var(--color-text);
     }
 
     .components-button {
@@ -154,15 +112,15 @@ body.toplevel_page_crazydomains {
 
         &.is-primary,
         &[variant="primary"] {
-            background-color: var(--mdc-theme-primary);
-            color: var(--dc-theme-white);
+            background-color: var(--color-primary);
+            color: var(--color-white);
         }
 
         &.is-secondary,
         &[variant="secondary"] {
-            border-color: var(--mdc-theme-primary);
-            box-shadow: inset 0 0 0 1px var(--mdc-theme-primary);
-            color: var(--mdc-theme-primary);
+            border-color: var(--color-primary);
+            box-shadow: inset 0 0 0 1px var(--color-primary);
+            color: var(--color-primary);
         }
 
         &:last-child {
@@ -183,7 +141,7 @@ body.toplevel_page_crazydomains {
     }
     .components-base-control__help,
     .components-radio-control__option label span span {
-        color: var(--dc-theme-grey);
+        color: var(--color-text);
         margin-top: 0.25rem;
     }
 }
@@ -202,7 +160,7 @@ body.toplevel_page_crazydomains {
 }
 
 .components-snackbar__content {
-    color: var(--dc-theme-grey--light4) !important;
+    color: var(--color-off-white) !important;
 }
 
 .grid {
@@ -254,7 +212,7 @@ body.toplevel_page_crazydomains {
 
 .wppcd {
     .components-card {
-        box-shadow: inset -2px -2px 0px 4px var(--dc-theme-black);
+        box-shadow: inset 0px 0px 0px 1px var(--color-border);
 
         &.short {
             margin-bottom: auto;

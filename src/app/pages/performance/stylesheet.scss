@@ -1,5 +1,10 @@
 .wppcd {
 
+    .components-card__header {
+        background: var(--color-off-white);
+        border: 1px solid var(--color-border);
+    }
+
     .components-radio-control__option label span {
         
         strong {
