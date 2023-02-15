@@ -1,19 +1,20 @@
 :root {
-    --mdc-theme-primary: #0D47FB;
-    --mdc-theme-extra: #BD2380;
-    --dc-theme-black: #000000;
-    --dc-theme-grey: #353738;
-    --dc-theme-grey-dark: #1F2044;
-    --dc-theme-white: #ffffff;
-    --mdc-theme-error: #ff182f;
-    --mdc-theme-error--dark: #701116;
-    --dc-theme-success: #23c161;
-    --dc-theme-success--dark: #034a1d;
+    --color-primary: #6FAC2F;
+    --color-primary-dark: #568f1b;
+    --color-title: #484848;
+    --color-text: #4F595C;
+    --color-link: #00A1EF;
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-error: #E83323;
+    --color-error-light: #ffebea;
+    --color-white: #FFFFFF;
+    --color-off-white: #F0F0F5;
+    --color-black: #000000;
 }
 
 body {
-    background-color: var(--dc-theme-white);
-    color: var(--dc-theme-grey-dark);
+    background-color: var(--color-white);
+    color: var(--color-text);
 }
 
 body,
@@ -31,7 +32,7 @@ input {
 }
 
 #wrap h1 {
-    color: var(--dc-theme-black);
+    color: var(--color-title);
     font-weight: 600;
     font-family: 'Noto Serif', serif;;
     font-size: 28px;
@@ -40,7 +41,7 @@ input {
 }
 
 #wrap h2 {
-    color: var(--dc-theme-grey-dark);
+    color: var(--color-title);
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
@@ -51,12 +52,12 @@ input {
 footer p {
     font-size: 14px;
     line-height: 22px;
-    color: var(--dc-theme-grey);
+    color: var(--color-text);
     padding: 8px;
 }
 
 footer p a {
-    color: var(--mdc-theme-primary);
+    color: var(--color-primary-dark);
     text-decoration: none;
 }
 
@@ -65,9 +66,9 @@ footer p a:hover {
 }
 
 .btn {
-    background: var(--mdc-theme-extra);
-    border: 5px solid var(--mdc-theme-extra);
-    color: var(--dc-theme-white);
+    background: var(--color-primary);
+    border: 5px solid var(--color-primary);
+    color: var(--color-white);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
@@ -75,9 +76,9 @@ footer p a:hover {
 }
 
 .btn:hover {
-    background-color: var(--dc-theme-white);
-    border-color: var(--mdc-theme-extra);
-    color: var(--mdc-theme-extra);
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
 }
 
 #subscribe-text p {
@@ -88,20 +89,20 @@ footer p a:hover {
 .status-message {
     font-size: 14px;
     line-height: 24px;
-    color: var(--dc-theme-grey);
+    color: var(--color-text);
     margin-bottom: 25px;
     display: none;
     padding: 8px 40px;
 }
 
 #success {
-    background: var(--dc-theme-success);
-    border: 5px solid var(--dc-theme-success--dark);
+    background: var(--color-primary);
+    border: 5px solid var(--color-primary);
 }
 
 #error-invalid,
 #error-active {
-    border: 5px solid var(--mdc-theme-error);
+    border: 5px solid var(--color-error);
 }
 
 form .inputs {
@@ -116,9 +117,9 @@ form .inputs label {
 }
 
 form .inputs.email input[type="email"] {
-    background-color: var(--dc-theme-white);
-    border: 1px solid var(--dc-theme-grey);
-    color: var(--dc-theme-grey-dark);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
     font-size: 11px;
     min-width: 240px;
     padding: 14px 15px;

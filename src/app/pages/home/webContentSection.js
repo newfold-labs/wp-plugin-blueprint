@@ -1,4 +1,4 @@
-import graphicUrl from '../../images/section-web-content.png';
+import graphicUrl from '../../../../assets/svg/website-content.svg';
 import { Heading } from '../../components';
 import {
 	Button,

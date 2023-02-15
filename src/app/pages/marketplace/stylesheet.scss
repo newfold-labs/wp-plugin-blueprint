@@ -24,13 +24,13 @@
             /* <= WP 5.4 */
             flex-direction: row;
             /* <= WP 5.6 */
-            gap: 1.5rem;
+            gap: 0;
             max-width: max-content;
             height: fit-content;
             margin-bottom: 1.5rem;
-            padding: 0rem .8rem 0 .8rem;
-            background-color: var(--mdc-theme-primary--light4);
-            box-shadow: 2px 2px 0 4px var(--mdc-theme-primary--light3);
+            // padding: 0rem .8rem 0 .8rem;
+            background-color: var(--color-white);
+            box-shadow: 0px 0px 0 1px var(--color-border);
 
             @media screen and (max-width: 600px) {
                 min-width: initial;
@@ -41,42 +41,54 @@
 
     .components-tab-panel__tabs-item {
         font-size: 14px;
-        color: var(--mdc-theme-primary--dark1);
-        padding: 16px 3px 16px 3px;
+        color: var(--color-text);
+        padding: 16px 1.5rem 16px 1.5rem;
+        min-width: 130px;
+        justify-content: center;
         height: auto;
         transition: all .15s ease-in-out;
+        border-right: 1px solid var(--color-border);
+        position: relative;
 
         &:hover {
-            color: var(--mdc-theme-primary--light1);
+            color: var(--color-title);
         }
 
         &:last-child {
-            padding-right: 3px;
+            border-right: none;
         }
 
         &.current-tab {
-            border-bottom: 2.5px solid;
-            border-color: var(--mdc-theme-primary--dark1);
+            background-color: var(--color-off-white);
+            color: var(--color-title);
             cursor: default;
 
             &:hover {
-                color: var(--mdc-theme-primary--dark1);
+                color: var(--color-primary-dark);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background-color: var(--color-primary);
             }
         }
 
         &.components-button:focus:not(:disabled) {
             box-shadow: none;
+            outline: unset;
         }
     }
 }
 
 .marketplace-item {
-    border-top: 2px;
-    border-left: 2px;
-    border-bottom: 4px;
-    border-right: 4px;
+    border-width: 1px;
     border-style: solid;
-    border-color: var(--dc-theme-black);
+    border-color: var(--color-border);
     overflow: hidden;
 
     &.components-card {
@@ -125,6 +137,8 @@
         border-bottom: none;
         flex-wrap: wrap;
         gap: .7rem;
+        border: none !important;
+        background-color: transparent !important;
 
         h2,
         h3 {
@@ -133,17 +147,29 @@
             margin: 0;
         }
 
+        .has-full-price {
+            .price {
+                margin-top: 8px;
+            }
+        }
+
         .price {
-            background-color: rgb(9, 141, 92, .15);
-            box-shadow: 1px 1px 0 2.5px rgb(9, 141, 92, .3);
-            border-radius: 0;
-            color: var(--mdc-theme-secondary--dark1);
+            background-color: var(--color-primary-lighter);
+            box-shadow: 0px 0px 0 1px var(--color-primary-light);
+            border-radius: 999px;
+            color: var(--color-primary-dark);
             font-size: .95rem;
             font-weight: 800;
             min-width: max-content;
             margin-left: 0;
-            padding: 0.25rem 0.75rem;
+            padding: 0.25rem 0.95rem;
         }
+
+        .full-price {
+            filter: grayscale(.5);
+            font-size: .85rem !important;
+        }
+
     }
 
     .components-card__body {

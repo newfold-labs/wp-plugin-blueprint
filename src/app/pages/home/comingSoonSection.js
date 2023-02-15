@@ -1,4 +1,4 @@
-import graphicUrl from '../../../../assets/svg/small-blue-star.svg';
+import graphicUrl from '../../../../assets/svg/coming-soon.svg';
 import { Heading, ErrorCard } from '../../components';
 import AppStore from '../../data/store';
 import {
