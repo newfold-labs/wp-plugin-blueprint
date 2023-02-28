@@ -30,7 +30,7 @@ const help = [
 		),
 		icon: 'format-chat',
 		cta: __( 'Live Chat', 'wp-plugin-crazy-domains' ),
-		url: 'https://www.crazydomains.com/contact/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
+		url: 'https://www.crazydomains.com.au/contact/#allday?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
 	},
 	{
 		name: 'twitter',

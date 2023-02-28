@@ -45,7 +45,7 @@ const WebHostingSection = () => {
 					<Button
 						variant="primary"
 						href={
-							`https://www.crazydomains.com/my-account/home?` +
+							`https://www.crazydomains.com.au/members/?` +
 							`&utm_campaign=` +
 							`&utm_content=home_hosting_sites_link` +
 							`&utm_term=manage_sites` +
@@ -74,7 +74,7 @@ const WebHostingSection = () => {
 					<Button
 						variant="primary"
 						href={
-							`https://www.crazydomains.com/manage-it/email-overview.jsp?` +
+							`https://www.crazydomains.com.au/members/email-hosting?` +
 							`&utm_campaign=` +
 							`&utm_content=home_hosting_email_link` +
 							`&utm_term=manage_email` +
@@ -103,7 +103,7 @@ const WebHostingSection = () => {
 					<Button
 						variant="secondary"
 						href={
-							`https://www.crazydomains.com/domains?` +
+							`https://www.crazydomains.com.au/members/domain-club?` +
 							`&utm_campaign=` +
 							`&utm_content=home_hosting_domain_link` +
 							`&utm_term=find_domain` +
