@@ -39,9 +39,10 @@ $crazydomains_module_container->set(
 		function() {
 			return new Plugin(
 				array(
-					'id'    => 'crazydomains',
-					'file'  => CRAZYDOMAINS_PLUGIN_FILE,
-					'brand' => get_option( 'mm_brand', 'crazydomains' ),
+					'id'           => 'crazydomains',
+					'file'         => CRAZYDOMAINS_PLUGIN_FILE,
+					'brand'        => get_option( 'mm_brand', 'crazydomains' ),
+					'install_date' => get_option( 'crazydomains_plugin_install_date' ),
 				)
 			);
 		}
