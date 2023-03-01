@@ -39,8 +39,9 @@ $crazydomains_module_container->set(
 		function() {
 			return new Plugin(
 				array(
-					'id'   => 'crazydomains',
-					'file' => CRAZYDOMAINS_PLUGIN_FILE,
+					'id'    => 'crazydomains',
+					'file'  => CRAZYDOMAINS_PLUGIN_FILE,
+					'brand' => get_option( 'mm_brand', 'crazydomains'),
 				)
 			);
 		}
