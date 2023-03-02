@@ -2,7 +2,7 @@ import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 
 let lastNoticeId;
-const W_NAV = document.querySelector( '#toplevel_page_crazy-domainss .wp-submenu' );
+const W_NAV = document.querySelector( '#toplevel_page_crazy-domains .wp-submenu' );
 /**
  * Set active nav in wp admin sub pages.
  *
