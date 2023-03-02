@@ -11,7 +11,7 @@ const AppStore = createContext( DEFAULT );
 
 export const crazydomainsApiFetchSettings = async ( options = {} ) => {
 	return await apiFetch( {
-		url: window.WPPCD.resturl + '/crazydomains/v1/settings',
+		url: window.WPPCD.resturl + '/crazy-domains/v1/settings',
 		...options,
 	} );
 };

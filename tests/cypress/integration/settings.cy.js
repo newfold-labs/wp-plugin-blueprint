@@ -3,7 +3,7 @@
 describe('Settings Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/settings');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/settings');
 		cy.injectAxe();
 		
 	});

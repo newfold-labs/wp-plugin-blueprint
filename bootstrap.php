@@ -39,8 +39,10 @@ $crazydomains_module_container->set(
 		function() {
 			return new Plugin(
 				array(
-					'id'   => 'crazydomains',
-					'file' => CRAZYDOMAINS_PLUGIN_FILE,
+					'id'           => 'crazy-domains',
+					'file'         => CRAZYDOMAINS_PLUGIN_FILE,
+					'brand'        => get_option( 'mm_brand', 'crazy-domains' ),
+					'install_date' => get_option( 'crazydomains_plugin_install_date' ),
 				)
 			);
 		}
@@ -51,7 +53,7 @@ $crazydomains_module_container->set(
 $crazydomains_module_container->set(
 	'comingsoon',
 	array(
-		'admin_app_url'       => admin_url( 'admin.php?page=crazydomains#/home' ),
+		'admin_app_url'       => admin_url( 'admin.php?page=crazy-domains#/home' ),
 		'template_h1'         => __( 'Coming Soon!', 'wp-plugin-crazy-domains' ),
 		'template_h2'         => __( 'A New WordPress Site', 'wp-plugin-crazy-domains' ),
 		'template_footer_t'   => sprintf(
@@ -75,7 +77,7 @@ $crazydomains_module_container->set(
 			__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-crazy-domains' ),
 			'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-crazy-domains' ) . '">',
 			'</a>',
-			'<a href="' . esc_url( admin_url( 'admin.php?page=crazydomains#/home' ) ) . '">',
+			'<a href="' . esc_url( admin_url( 'admin.php?page=crazy-domains#/home' ) ) . '">',
 			'</a>'
 		),
 		'template_styles'     => esc_url( CRAZYDOMAINS_PLUGIN_URL . 'assets/styles/coming-soon.css' ),
@@ -103,7 +105,7 @@ if ( is_admin() ) {
 	// Handle plugin upgrades
 	$upgrade_handler = new UpgradeHandler(
 		CRAZYDOMAINS_PLUGIN_DIR . '/inc/upgrades',            // Directory where upgrade routines live
-		get_option( 'crazydomains_plugin_version', '1.0.0' ), // Old plugin version (from database)
+		get_option( 'crazydomains_plugin_version', '0.1.0' ), // Old plugin version (from database)
 		CRAZYDOMAINS_PLUGIN_VERSION                           // New plugin version (from code)
 	);
 

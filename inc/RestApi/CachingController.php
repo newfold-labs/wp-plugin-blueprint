@@ -14,7 +14,7 @@ class CachingController extends \WP_REST_Controller {
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'crazydomains/v1';
+	protected $namespace = 'crazy-domains/v1';
 
 	/**
 	 * Constructor.

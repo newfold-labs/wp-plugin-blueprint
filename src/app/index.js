@@ -74,7 +74,7 @@ const AppBody = ( props ) => {
 			<Header />
 			<NewfoldNotifications
 				constants={{
-					context: 'crazydomains-plugin',
+					context: 'crazy-domains-plugin',
 					page: hashedPath,
 					resturl: window.WPPCD.resturl
 				}}

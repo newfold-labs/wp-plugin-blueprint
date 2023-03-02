@@ -8,7 +8,7 @@ const help = [
 		),
 		icon: 'email',
 		cta: __( 'Email Us', 'wp-plugin-crazy-domains' ),
-		url: 'https://www.crazydomains.com/contact/?utm_campaign=&utm_content=help_email_link&utm_term=email_us&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
+		url: 'https://www.crazydomains.com/contact/?utm_campaign=&utm_content=help_email_link&utm_term=email_us&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazy-domains#/help',
 	},
 	{
 		name: 'phone',
@@ -30,7 +30,7 @@ const help = [
 		),
 		icon: 'format-chat',
 		cta: __( 'Live Chat', 'wp-plugin-crazy-domains' ),
-		url: 'https://www.crazydomains.com/contact/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
+		url: 'https://www.crazydomains.com.au/contact/#allday?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazy-domains#/help',
 	},
 	{
 		name: 'twitter',
@@ -52,7 +52,7 @@ const help = [
 		),
 		icon: 'book',
 		cta: __( 'We can help', 'wp-plugin-crazy-domains' ),
-		url: 'https://www.crazydomains.com/help/?utm_campaign=&utm_content=help_help_link&utm_term=we_can_help&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
+		url: 'https://www.crazydomains.com/help/?utm_campaign=&utm_content=help_help_link&utm_term=we_can_help&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazy-domains#/help',
 	},
 	{
 		name: 'academy',
@@ -63,7 +63,7 @@ const help = [
 		),
 		icon: 'book',
 		cta: __( 'View Courses', 'wp-plugin-crazy-domains' ),
-		url: 'https://www.crazydomains.com/learn/online-academy/?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
+		url: 'https://www.crazydomains.com/learn/online-academy/?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazy-domains#/help',
 	},
 	{
 		name: 'blog',
@@ -74,7 +74,7 @@ const help = [
 		),
 		icon: 'text-page',
 		cta: __( 'Learn Stuff', 'wp-plugin-crazy-domains' ),
-		url: 'https://www.crazydomains.com/learn/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazydomains#/help',
+		url: 'https://www.crazydomains.com/learn/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=crazy-domains#/help',
 	},
 	{
 		name: 'video',
