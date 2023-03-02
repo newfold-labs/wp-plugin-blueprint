@@ -3,7 +3,7 @@
 describe('Performance Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/performance');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/performance');
 		cy.injectAxe();
 		
 	});

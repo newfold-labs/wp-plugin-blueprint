@@ -9,7 +9,7 @@ describe('Marketplace Page', function () {
 		}, {
 			fixture: 'products'
 		}).as('products');
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/marketplace');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/marketplace');
 		cy.wait('@products');
 	});
 

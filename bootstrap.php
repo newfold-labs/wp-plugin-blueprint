@@ -39,9 +39,9 @@ $crazydomains_module_container->set(
 		function() {
 			return new Plugin(
 				array(
-					'id'           => 'crazydomains',
+					'id'           => 'crazy-domains',
 					'file'         => CRAZYDOMAINS_PLUGIN_FILE,
-					'brand'        => get_option( 'mm_brand', 'crazydomains' ),
+					'brand'        => get_option( 'mm_brand', 'crazy-domains' ),
 					'install_date' => get_option( 'crazydomains_plugin_install_date' ),
 				)
 			);
@@ -53,7 +53,7 @@ $crazydomains_module_container->set(
 $crazydomains_module_container->set(
 	'comingsoon',
 	array(
-		'admin_app_url'       => admin_url( 'admin.php?page=crazydomains#/home' ),
+		'admin_app_url'       => admin_url( 'admin.php?page=crazy-domains#/home' ),
 		'template_h1'         => __( 'Coming Soon!', 'wp-plugin-crazy-domains' ),
 		'template_h2'         => __( 'A New WordPress Site', 'wp-plugin-crazy-domains' ),
 		'template_footer_t'   => sprintf(
@@ -77,7 +77,7 @@ $crazydomains_module_container->set(
 			__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-crazy-domains' ),
 			'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-crazy-domains' ) . '">',
 			'</a>',
-			'<a href="' . esc_url( admin_url( 'admin.php?page=crazydomains#/home' ) ) . '">',
+			'<a href="' . esc_url( admin_url( 'admin.php?page=crazy-domains#/home' ) ) . '">',
 			'</a>'
 		),
 		'template_styles'     => esc_url( CRAZYDOMAINS_PLUGIN_URL . 'assets/styles/coming-soon.css' ),

@@ -3,7 +3,7 @@
 describe('Help Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/help');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/help');
 	});
 	
 	it('Is Accessible', () => {

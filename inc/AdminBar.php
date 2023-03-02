@@ -33,7 +33,7 @@ class AdminBar {
 			array(
 				'id'    => 'crazydomains-support',
 				'title' => __( 'Need help?', 'wp-plugin-crazy-domains' ),
-				'href'  => admin_url( 'admin.php?page=crazydomains#/help' ),
+				'href'  => admin_url( 'admin.php?page=crazy-domains#/help' ),
 				'meta'  => array(
 					'title' => esc_attr__( 'We\'re here for you!', 'wp-plugin-crazy-domains' ),
 				),

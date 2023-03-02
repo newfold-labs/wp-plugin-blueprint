@@ -50,7 +50,7 @@ const WebHostingSection = () => {
 							`&utm_content=home_hosting_sites_link` +
 							`&utm_term=manage_sites` +
 							`&utm_medium=brand_plugin` +
-							`&utm_source=wp-admin/admin.php?page=crazydomains#/home`
+							`&utm_source=wp-admin/admin.php?page=crazy-domains#/home`
 						}
 						target="_blank"
 						icon="desktop"
@@ -79,7 +79,7 @@ const WebHostingSection = () => {
 							`&utm_content=home_hosting_email_link` +
 							`&utm_term=manage_email` +
 							`&utm_medium=brand_plugin` +
-							`&utm_source=wp-admin/admin.php?page=crazydomains#/home`
+							`&utm_source=wp-admin/admin.php?page=crazy-domains#/home`
 						}
 						target="_blank"
 						icon="email"
@@ -108,7 +108,7 @@ const WebHostingSection = () => {
 							`&utm_content=home_hosting_domain_link` +
 							`&utm_term=find_domain` +
 							`&utm_medium=brand_plugin` +
-							`&utm_source=wp-admin/admin.php?page=crazydomains#/home`
+							`&utm_source=wp-admin/admin.php?page=crazy-domains#/home`
 						}
 						target="_blank"
 						icon="admin-site"

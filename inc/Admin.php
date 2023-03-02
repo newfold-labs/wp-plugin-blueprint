@@ -19,13 +19,13 @@ final class Admin {
 		/* Add Page to WordPress Admin Menu. */
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
 		/* Load Page Scripts & Styles. */
-		\add_action( 'load-toplevel_page_crazydomains', array( __CLASS__, 'assets' ) );
+		\add_action( 'load-toplevel_page_crazy-domains', array( __CLASS__, 'assets' ) );
 		/* Add Links to WordPress Plugins list item. */
 		\add_filter( 'plugin_action_links_wp-plugin-crazy-domains/wp-plugin-crazy-domains.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
 
-		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'crazydomains' ) >= 0 ) { // phpcs:ignore
+		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'crazy-domains' ) >= 0 ) { // phpcs:ignore
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
 		}
 	}
@@ -39,11 +39,11 @@ final class Admin {
 	 */
 	public static function subpages() {
 		return array(
-			'crazydomains#/home'        => __( 'Home', 'wp-plugin-crazy-domains' ),
-			'crazydomains#/marketplace' => __( 'Marketplace', 'wp-plugin-crazy-domains' ),
-			'crazydomains#/performance' => __( 'Performance', 'wp-plugin-crazy-domains' ),
-			'crazydomains#/settings'    => __( 'Settings', 'wp-plugin-crazy-domains' ),
-			'crazydomains#/help'        => __( 'Help', 'wp-plugin-crazy-domains' ),
+			'crazy-domains#/home'        => __( 'Home', 'wp-plugin-crazy-domains' ),
+			'crazy-domains#/marketplace' => __( 'Marketplace', 'wp-plugin-crazy-domains' ),
+			'crazy-domains#/performance' => __( 'Performance', 'wp-plugin-crazy-domains' ),
+			'crazy-domains#/settings'    => __( 'Settings', 'wp-plugin-crazy-domains' ),
+			'crazy-domains#/help'        => __( 'Help', 'wp-plugin-crazy-domains' ),
 		);
 	}
 
@@ -53,9 +53,9 @@ final class Admin {
 	 */
 	public static function admin_nav_style() {
 		echo '<style>';
-		echo 'li#toplevel_page_crazydomains a.toplevel_page_crazydomains div.wp-menu-image.svg { transition: fill 0.15s; background-size: 24px auto !important; }';
-		echo 'ul#adminmenu a.toplevel_page_crazydomains.wp-has-current-submenu:after, ul#adminmenu>li#toplevel_page_crazydomains.current>a.current:after { border-right-color: #fff !important; }';
-		echo 'li#toplevel_page_crazydomains > ul > li.wp-first-item { display: none !important; }';
+		echo 'li#toplevel_page_crazy-domains a.toplevel_page_crazy-domains div.wp-menu-image.svg { transition: fill 0.15s; background-size: 24px auto !important; }';
+		echo 'ul#adminmenu a.toplevel_page_crazy-domains.wp-has-current-submenu:after, ul#adminmenu>li#toplevel_page_crazy-domains.current>a.current:after { border-right-color: #fff !important; }';
+		echo 'li#toplevel_page_crazy-domains > ul > li.wp-first-item { display: none !important; }';
 		echo '#wp-toolbar #wp-admin-bar-crazydomains-coming_soon .ab-item { padding: 0; }';
 		echo '</style>';
 	}
@@ -72,7 +72,7 @@ final class Admin {
 			__( 'Crazy Domains', 'wp-plugin-crazy-domains' ),
 			__( 'Crazy Domains', 'wp-plugin-crazy-domains' ),
 			'manage_options',
-			'crazydomains',
+			'crazy-domains',
 			array( __CLASS__, 'render' ),
 			$crazydomainscom,
 			0
@@ -80,7 +80,7 @@ final class Admin {
 
 		foreach ( self::subpages() as $route => $title ) {
 			\add_submenu_page(
-				'crazydomains',
+				'crazy-domains',
 				$title,
 				$title,
 				'manage_options',
@@ -155,7 +155,7 @@ final class Admin {
 		);
 
 		$screen = get_current_screen();
-		if ( false !== strpos( $screen->id, 'crazydomains' ) ) {
+		if ( false !== strpos( $screen->id, 'crazy-domains' ) ) {
 			\wp_enqueue_script( 'crazydomains-script' );
 			\wp_enqueue_style( 'crazydomains-style' );
 		}
@@ -170,8 +170,8 @@ final class Admin {
 	public static function actions( $actions ) {
 		return array_merge(
 			array(
-				'overview' => '<a href="' . \admin_url( 'admin.php?page=crazydomains#/home' ) . '">' . __( 'Home', 'wp-plugin-crazy-domains' ) . '</a>',
-				'settings' => '<a href="' . \admin_url( 'admin.php?page=crazydomains#/settings' ) . '">' . __( 'Settings', 'wp-plugin-crazy-domains' ) . '</a>',
+				'overview' => '<a href="' . \admin_url( 'admin.php?page=crazy-domains#/home' ) . '">' . __( 'Home', 'wp-plugin-crazy-domains' ) . '</a>',
+				'settings' => '<a href="' . \admin_url( 'admin.php?page=crazy-domains#/settings' ) . '">' . __( 'Settings', 'wp-plugin-crazy-domains' ) . '</a>',
 			),
 			$actions
 		);

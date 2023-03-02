@@ -3,7 +3,7 @@
 describe('Coming Soon', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/settings');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/settings');
 		cy.injectAxe();
 		
 	});
@@ -29,7 +29,7 @@ describe('Coming Soon', function () {
 	});
 
 	it('Has Coming Soon Section on Home', () => {
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/home');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/home');
 		cy
 			.get('.wppcd-section-coming-soon')
 			.scrollIntoView()
@@ -92,10 +92,10 @@ describe('Coming Soon', function () {
 
 	it('Launching launches site', () => {
 		cy.login(Cypress.env('wpUsername'), Cypress.env('wpPassword'));
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/settings');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/settings');
 		cy.get('.coming-soon-toggle input[type="checkbox"]').should('be.checked');
 
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/home');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/home');
 		cy
 			.get('.wppcd-section-coming-soon')
 			.scrollIntoView()
@@ -117,6 +117,6 @@ describe('Coming Soon', function () {
 			.should('not.exist');
 
 		cy.login(Cypress.env('wpUsername'), Cypress.env('wpPassword'));
-		cy.visit('/wp-admin/admin.php?page=crazydomains#/settings');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains#/settings');
 	})
 });

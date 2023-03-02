@@ -2,7 +2,7 @@ import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 
 let lastNoticeId;
-const W_NAV = document.querySelector( '#toplevel_page_crazydomains .wp-submenu' );
+const W_NAV = document.querySelector( '#toplevel_page_crazy-domainss .wp-submenu' );
 /**
  * Set active nav in wp admin sub pages.
  *
@@ -80,7 +80,7 @@ export const dispatchUpdateSnackbar = ( text = 'Settings Saved' ) => {
 export const crazydomainsSettingsApiFetch = ( data, passError, thenCallback ) => {
 	return apiFetch( {
 		// path: 'crazydomains/v1/settings', //  can't use path bacause it breaks on temp domains
-		url: window.WPPCD.resturl + '/crazydomains/v1/settings',
+		url: window.WPPCD.resturl + '/crazy-domains/v1/settings',
 		method: 'POST',
 		data,
 	} )
@@ -102,7 +102,7 @@ export const crazydomainsSettingsApiFetch = ( data, passError, thenCallback ) =>
  */
 export const crazydomainsPurgeCacheApiFetch = ( data, passError, thenCallback ) => {
 	return apiFetch( {
-		url: window.WPPCD.resturl + '/crazydomains/v1/caching',
+		url: window.WPPCD.resturl + '/crazy-domains/v1/caching',
 		method: 'DELETE',
 		data,
 	} )
