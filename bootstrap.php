@@ -105,7 +105,7 @@ if ( is_admin() ) {
 	// Handle plugin upgrades
 	$upgrade_handler = new UpgradeHandler(
 		CRAZYDOMAINS_PLUGIN_DIR . '/inc/upgrades',            // Directory where upgrade routines live
-		get_option( 'crazydomains_plugin_version', '1.0.0' ), // Old plugin version (from database)
+		get_option( 'crazydomains_plugin_version', '0.1.0' ), // Old plugin version (from database)
 		CRAZYDOMAINS_PLUGIN_VERSION                           // New plugin version (from code)
 	);
 
