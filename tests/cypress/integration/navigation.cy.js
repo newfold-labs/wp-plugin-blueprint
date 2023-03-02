@@ -3,7 +3,7 @@
 describe('Navigation', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=crazydomains');
+		cy.visit('/wp-admin/admin.php?page=crazy-domains');
 		cy.injectAxe();
 		
 	});
