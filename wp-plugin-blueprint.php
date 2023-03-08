@@ -64,10 +64,11 @@ $nfd_plugins_check->incompatible_plugins = array(
 );
 // Deactivate legacy plugin
 $nfd_plugins_check->legacy_plugins = array(
-	'The MOJO Marketplace' => 'mojo-marketplace-wp-plugin/mojo-marketplace.php',
-	'The MOJO Plugin'      => 'wp-plugin-mojo/wp-plugin-mojo.php',
-	'The HostGator Plugin' => 'wp-plugin-hostgator/wp-plugin-hostgator.php',
-	'The Web.com Plugin'   => 'wp-plugin-web/wp-plugin-web.php',
+	'The MOJO Marketplace'     => 'mojo-marketplace-wp-plugin/mojo-marketplace.php',
+	'The MOJO Plugin'          => 'wp-plugin-mojo/wp-plugin-mojo.php',
+	'The HostGator Plugin'     => 'wp-plugin-hostgator/wp-plugin-hostgator.php',
+	'The Web.com Plugin'       => 'wp-plugin-web/wp-plugin-web.php',
+	'The Crazy Domains Plugin' => 'wp-plugin-web/wp-plugin-crazy-domains.php',
 );
 $pass_nfd_check = $nfd_plugins_check->check_plugin_requirements();
 
