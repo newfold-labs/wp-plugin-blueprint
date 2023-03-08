@@ -13,13 +13,13 @@ const SettingsCallout = () => {
 		<Card className="short card-settings-callout">
 			<CardHeader>
 				<Heading level="3">
-					{ __( 'Settings', 'wp-plugin-crazy-domains' ) }
+					{ __( 'Settings', 'wp-plugin-blueprint' ) }
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{ __(
 					'Looking for other Settings? You can refine auto-updates, comments and backups of content revisions on the Settings page.',
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 				) }
 			</CardBody>
 			<CardFooter>
@@ -29,7 +29,7 @@ const SettingsCallout = () => {
 					icon={ settings }
 					className="callout-link-settings"
 				>
-					{ __( 'Settings', 'wp-plugin-crazy-domains' ) }
+					{ __( 'Settings', 'wp-plugin-blueprint' ) }
 				</Button>
 			</CardFooter>
 		</Card>

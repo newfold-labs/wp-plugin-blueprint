@@ -9,9 +9,9 @@ const DEFAULT = {
 
 const AppStore = createContext( DEFAULT );
 
-export const crazydomainsApiFetchSettings = async ( options = {} ) => {
+export const blueprintApiFetchSettings = async ( options = {} ) => {
 	return await apiFetch( {
-		url: window.WPPCD.resturl + '/crazy-domains/v1/settings',
+		url: window.WPPB.resturl + '/blueprint/v1/settings',
 		...options,
 	} );
 };
@@ -35,10 +35,10 @@ export const AppStoreProvider = ( { children } ) => {
 
 	useEffect( () => {
 		if ( false === booted ) {
-			crazydomainsApiFetchSettings()
+			blueprintApiFetchSettings()
 				.then( ( settings ) => {
-					setStore( { ...store, ...window.WPPCD, ...settings } );
-					window.WPPCD.migrated = true;
+					setStore( { ...store, ...window.WPPB, ...settings } );
+					window.WPPB.migrated = true;
 					setBooted( true );
 				} )
 				.catch( ( error ) => {

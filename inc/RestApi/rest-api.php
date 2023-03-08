@@ -2,10 +2,10 @@
 /**
  * This file sets up custom api controllers for the plugin.
  *
- * @package WPPluginCrazyDomains
+ * @package WPPluginBlueprint
  */
 
-namespace CrazyDomains;
+namespace Blueprint;
 
 /**
  * Instantiate controllers and register routes.
@@ -13,8 +13,8 @@ namespace CrazyDomains;
 function init_rest_api() {
 
 	$controllers = array(
-		'CrazyDomains\\RestApi\\CachingController',
-		'CrazyDomains\\RestApi\\SettingsController',
+		'Blueprint\\RestApi\\CachingController',
+		'Blueprint\\RestApi\\SettingsController',
 	);
 
 	foreach ( $controllers as $controller ) {

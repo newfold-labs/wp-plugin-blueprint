@@ -2,13 +2,13 @@
 /**
  * Register AdminBar help button.
  *
- * @package WPPluginCrazyDomains
+ * @package WPPluginBlueprint
  */
 
-namespace CrazyDomains;
+namespace Blueprint;
 
 /**
- * \CrazyDomains\AdminBar
+ * \Blueprint\AdminBar
  */
 class AdminBar {
 
@@ -31,11 +31,11 @@ class AdminBar {
 		global $wp_admin_bar;
 		$wp_admin_bar->add_menu(
 			array(
-				'id'    => 'crazydomains-support',
-				'title' => __( 'Need help?', 'wp-plugin-crazy-domains' ),
-				'href'  => admin_url( 'admin.php?page=crazy-domains#/help' ),
+				'id'    => 'blueprint-support',
+				'title' => __( 'Need help?', 'wp-plugin-blueprint' ),
+				'href'  => admin_url( 'admin.php?page=blueprint#/help' ),
 				'meta'  => array(
-					'title' => esc_attr__( 'We\'re here for you!', 'wp-plugin-crazy-domains' ),
+					'title' => esc_attr__( 'We\'re here for you!', 'wp-plugin-blueprint' ),
 				),
 			)
 		);

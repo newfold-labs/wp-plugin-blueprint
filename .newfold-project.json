@@ -1,10 +1,10 @@
 {
-    "name": "Crazy Domains WordPress Plugin",
-    "description": "WordPress plugin that integrates your WordPress site with the Crazy Domains control panel, including performance, security, and update features.",
-    "url": "https://crazydomains.com",
+    "name": "Blueprint WordPress Plugin",
+    "description": "WordPress plugin that integrates your WordPress site with the Blueprint control panel, including performance, security, and update features.",
+    "url": "https://blueprint.com",
     "package": {
         "vendor": "newfold",
-        "name": "wp-plugin-crazy-domains"
+        "name": "wp-plugin-blueprint"
     },
     "license": {
         "slug": "GPL-2.0-or-later",
@@ -13,17 +13,17 @@
     },
     "author": {
         "name": "Evan Mullins",
-        "email": "evanrm@gmail.com",
+        "email": "evan@bluehost.com",
         "url": "https://evanmullins.com"
     },
-    "text_domain": "wp-plugin-crazy-domains",
-    "namespace": "CrazyDomains",
+    "text_domain": "wp-plugin-blueprint",
+    "namespace": "Blueprint",
     "prefixes": {
-        "long": "WPPluginCrazyDomains",
-        "short": "wppcd",
-        "function": "wppcd_",
-        "constant": "WPPCD_",
-        "meta": "wppcd_",
-        "slug": "wppcd-"
+        "long": "WPPluginBlueprint",
+        "short": "wppb",
+        "function": "wppb_",
+        "constant": "WPPB_",
+        "meta": "wppb_",
+        "slug": "wppb-"
     }
 }

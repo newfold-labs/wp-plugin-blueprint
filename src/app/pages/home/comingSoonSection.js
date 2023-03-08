@@ -2,7 +2,7 @@ import graphicUrl from '../../../../assets/svg/coming-soon.svg';
 import { Heading, ErrorCard } from '../../components';
 import AppStore from '../../data/store';
 import {
-	crazydomainsSettingsApiFetch,
+	blueprintSettingsApiFetch,
 	dispatchUpdateSnackbar,
 	comingSoonAdminbarToggle,
 } from '../../util/helpers';
@@ -24,23 +24,23 @@ const ComingSoonSection = () => {
 
 	const getComingSoonHeadline = () => {
 		return comingSoon
-			? __( 'Coming Soon', 'wp-plugin-crazy-domains' )
-			: __( 'Site Launched', 'wp-plugin-crazy-domains' );
+			? __( 'Coming Soon', 'wp-plugin-blueprint' )
+			: __( 'Site Launched', 'wp-plugin-blueprint' );
 	};
 	const getComingSoonSubhead = () => {
 		return comingSoon
-			? __( 'Site visitors see "Coming Soon"', 'wp-plugin-crazy-domains' )
-			: __( 'Your site is live!', 'wp-plugin-crazy-domains' );
+			? __( 'Site visitors see "Coming Soon"', 'wp-plugin-blueprint' )
+			: __( 'Your site is live!', 'wp-plugin-blueprint' );
 	};
 	const getComingSoonBody = () => {
 		return comingSoon
 			? __(
 					"Once you've finished setting up your site, launch it so your visitors can reach it.",
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 			  )
 			: __(
 					'Congratulations! Visitors will now see the site. You can always turn Coming Soon on from the Settings tab above.',
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 			  );
 	};
 	const getComingSoonGraphicClass = () => {
@@ -56,7 +56,7 @@ const ComingSoonSection = () => {
 					setWasComingSoon( () => true );
 				} }
 			>
-				{ __( 'Launch Site', 'wp-plugin-crazy-domains' ) }
+				{ __( 'Launch Site', 'wp-plugin-blueprint' ) }
 			</Button>
 		) : (
 			<>
@@ -68,7 +68,7 @@ const ComingSoonSection = () => {
 						setWasComingSoon( () => true );
 					} }
 				>
-					{ __( 'Restore Coming Soon', 'wp-plugin-crazy-domains' ) }
+					{ __( 'Restore Coming Soon', 'wp-plugin-blueprint' ) }
 				</Button>
 				<Button
 					variant="link"
@@ -77,19 +77,19 @@ const ComingSoonSection = () => {
 						setWasComingSoon( () => false );
 					} }
 				>
-					{ __( 'Dismiss', 'wp-plugin-crazy-domains' ) }
+					{ __( 'Dismiss', 'wp-plugin-blueprint' ) }
 				</Button>
 			</>
 		);
 	};
 	const getComingSoonNoticeText = () => {
 		return comingSoon
-			? __( 'Coming soon activated.', 'wp-plugin-crazy-domains' )
-			: __( 'Coming soon deactivated.', 'wp-plugin-crazy-domains' );
+			? __( 'Coming soon activated.', 'wp-plugin-blueprint' )
+			: __( 'Coming soon deactivated.', 'wp-plugin-blueprint' );
 	};
 
 	useUpdateEffect( () => {
-		crazydomainsSettingsApiFetch( { comingSoon }, setError, ( response ) => {
+		blueprintSettingsApiFetch( { comingSoon }, setError, ( response ) => {
 			setStore( {
 				...store,
 				comingSoon,
@@ -101,8 +101,8 @@ const ComingSoonSection = () => {
 
 	if ( isError ) {
 		return (
-			<section className="wppcd-section coming-soon">
-				<ErrorCard error={ isError } className="wppcd-section-card" />
+			<section className="wppb-section coming-soon">
+				<ErrorCard error={ isError } className="wppb-section-card" />
 			</section>
 		);
 	}
@@ -111,14 +111,14 @@ const ComingSoonSection = () => {
 		return <></>;
 	}
 	return (
-		<section className="wppcd-section wppcd-section-coming-soon">
+		<section className="wppb-section wppb-section-coming-soon">
 			<img
 				src={ graphicUrl }
 				className={ getComingSoonGraphicClass() }
 				style={ { top: 0, width: '280px', height: 'auto' } }
-				alt={ __( 'Launch site', 'wp-plugin-crazy-domains' ) }
+				alt={ __( 'Launch site', 'wp-plugin-blueprint' ) }
 			/>
-			<Card size="large" className="wppcd-section-card">
+			<Card size="large" className="wppb-section-card">
 				<CardHeader>
 					<Heading level="3">{ getComingSoonHeadline() }</Heading>
 					<p>{ getComingSoonSubhead() }</p>

@@ -2,18 +2,18 @@
 /**
  * Base functions
  *
- * @package WPPluginCrazyDomains
+ * @package WPPluginBlueprint
  */
 
-namespace CrazyDomains;
+namespace Blueprint;
 
 /**
  * Check if plugin install date exists.
  *
  * @return bool
  */
-function crazydomains_has_plugin_install_date() {
-	return ! empty( get_option( 'crazydomains_plugin_install_date', '' ) );
+function blueprint_has_plugin_install_date() {
+	return ! empty( get_option( 'blueprint_plugin_install_date', '' ) );
 }
 
 /**
@@ -21,8 +21,8 @@ function crazydomains_has_plugin_install_date() {
  *
  * @return string
  */
-function crazydomains_get_plugin_install_date() {
-	return (string) get_option( 'crazydomains_plugin_install_date', gmdate( 'U' ) );
+function blueprint_get_plugin_install_date() {
+	return (string) get_option( 'blueprint_plugin_install_date', gmdate( 'U' ) );
 }
 
 /**
@@ -30,8 +30,8 @@ function crazydomains_get_plugin_install_date() {
  *
  * @param string $value Date in Unix timestamp format.
  */
-function crazydomains_set_plugin_install_date( $value ) {
-	update_option( 'crazydomains_plugin_install_date', $value, true );
+function blueprint_set_plugin_install_date( $value ) {
+	update_option( 'blueprint_plugin_install_date', $value, true );
 }
 
 
@@ -40,14 +40,14 @@ function crazydomains_set_plugin_install_date( $value ) {
  *
  * @return int
  */
-function crazydomains_get_days_since_plugin_install_date() {
-	return absint( ( gmdate( 'U' ) - crazydomains_get_plugin_install_date() ) / DAY_IN_SECONDS );
+function blueprint_get_days_since_plugin_install_date() {
+	return absint( ( gmdate( 'U' ) - blueprint_get_plugin_install_date() ) / DAY_IN_SECONDS );
 }
 
 /**
  * Basic setup
  */
-function crazydomains_setup() {
+function blueprint_setup() {
 	if ( ( '' === get_option( 'mm_master_aff' ) || false === get_option( 'mm_master_aff' ) ) && defined( 'MMAFF' ) ) {
 		update_option( 'mm_master_aff', MMAFF );
 	}
@@ -65,16 +65,16 @@ function crazydomains_setup() {
 		$events['hourly'][ $event['ea'] ] = $event;
 		update_option( 'mm_cron', $events );
 	}
-	if ( ! crazydomains_has_plugin_install_date() ) {
+	if ( ! blueprint_has_plugin_install_date() ) {
 		$date = false;
 		if ( ! empty( $install_date ) ) {
 			$date = \DateTime::createFromFormat( 'M d, Y', $install_date );
 		}
-		crazydomains_set_plugin_install_date( $date ? $date->format( 'U' ) : gmdate( 'U' ) );
+		blueprint_set_plugin_install_date( $date ? $date->format( 'U' ) : gmdate( 'U' ) );
 	}
 }
 
-add_action( 'admin_init', __NAMESPACE__ . '\\crazydomains_setup' );
+add_action( 'admin_init', __NAMESPACE__ . '\\blueprint_setup' );
 
 
 /**
@@ -83,7 +83,7 @@ add_action( 'admin_init', __NAMESPACE__ . '\\crazydomains_setup' );
  * @param string $install_date value from hook
  * @return int
  */
-function crazydomains_install_date_filter( $install_date ) {
-	return crazydomains_get_plugin_install_date();
+function blueprint_install_date_filter( $install_date ) {
+	return blueprint_get_plugin_install_date();
 }
-add_filter( 'nfd_install_date_filter', __NAMESPACE__ . '\\crazydomains_install_date_filter' );
+add_filter( 'nfd_install_date_filter', __NAMESPACE__ . '\\blueprint_install_date_filter' );

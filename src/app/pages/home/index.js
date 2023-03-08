@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 const Home = () => {
 	return (
-		<div className="wppcd-home">
+		<div className="wppb-home">
 			<ComingSoonSection />
 			<WebContentSection />
 			<SettingsSection />

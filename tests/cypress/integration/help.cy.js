@@ -3,13 +3,13 @@
 describe('Help Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=crazy-domains#/help');
+		cy.visit('/wp-admin/admin.php?page=blueprint#/help');
 	});
 	
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(500);
-		cy.checkA11y('.wppcd-app-body');
+		cy.checkA11y('.wppb-app-body');
 	});
 
 	it('Email Card Exists', () => {

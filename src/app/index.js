@@ -44,7 +44,7 @@ const Notices = () => {
 
 const handlePageLoad = () => {
 	const location = useLocation();
-	const routeContents = document.querySelector( '.wppcd-app-body-inner' );
+	const routeContents = document.querySelector( '.wppb-app-body-inner' );
 	useEffect( () => {
 		setActiveSubnav( location.pathname );
 		window.scrollTo( 0, 0 );
@@ -63,20 +63,20 @@ const AppBody = ( props ) => {
 
 	return (
 		<main
-			id="wppcd-app-rendered"
+			id="wppb-app-rendered"
 			className={ classnames(
-				'wpadmin-brand-crazydomains',
-				`wppcd-wp-${ WPPCD.wpversion }`,
-				`wppcd-page-${ kebabCase( location.pathname ) }`,
+				'wpadmin-brand-blueprint',
+				`wppb-wp-${ WPPB.wpversion }`,
+				`wppb-page-${ kebabCase( location.pathname ) }`,
 				props.className
 			) }
 		>
 			<Header />
 			<NewfoldNotifications
 				constants={{
-					context: 'crazy-domains-plugin',
+					context: 'blueprint-plugin',
 					page: hashedPath,
-					resturl: window.WPPCD.resturl
+					resturl: window.WPPB.resturl
 				}}
 				methods={{
 					apiFetch,
@@ -86,8 +86,8 @@ const AppBody = ( props ) => {
 					useEffect
 				}}
 			/>
-			<div className="wppcd-app-body">
-				<div className="wppcd-app-body-inner">
+			<div className="wppb-app-body">
+				<div className="wppb-app-body-inner">
 					<ErrorBoundary FallbackComponent={ <ErrorCard /> }>
 						{ hasError && <ErrorCard error={ hasError } /> }
 						{ ( true === booted && <AppRoutes /> ) ||
@@ -96,7 +96,7 @@ const AppBody = ( props ) => {
 				</div>
 			</div>
 
-			<div className="wppcd-app-snackbar">
+			<div className="wppb-app-snackbar">
 				<Notices />
 			</div>
 		</main>

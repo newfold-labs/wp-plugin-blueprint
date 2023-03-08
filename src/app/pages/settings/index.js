@@ -10,7 +10,7 @@ import { useViewportMatch } from '@wordpress/compose';
 const Settings = () => {
 	const isWideViewport = useViewportMatch( 'large' );
 	return (
-		<div className="wppcd-Settings grid col2 has-page-graphic">
+		<div className="wppb-Settings grid col2 has-page-graphic">
 			<AutomaticUpdates />
 			{ isWideViewport && (
 				<div>
@@ -21,7 +21,7 @@ const Settings = () => {
 							width: '70%',
 							height: 'auto',
 						} }
-						alt={ __( 'Website building illustration', 'wp-plugin-crazy-domains' ) }
+						alt={ __( 'Website building illustration', 'wp-plugin-blueprint' ) }
 					/>
 				</div>
 			) }

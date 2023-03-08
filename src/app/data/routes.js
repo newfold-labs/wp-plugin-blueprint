@@ -28,7 +28,7 @@ export const AppRoutes = () => {
 				element={
 					<main style={ { padding: '1rem' } }>
 						<p>
-							{ __( "There's nothing here!", 'wp-plugin-crazy-domains' ) }
+							{ __( "There's nothing here!", 'wp-plugin-blueprint' ) }
 						</p>
 					</main>
 				}
@@ -49,31 +49,31 @@ const utilityRoutePaths = [ '/performance', '/settings', '/help' ];
 export const routes = [
 	{
 		name: '/home',
-		title: __( 'Home', 'wp-plugin-crazy-domains' ),
+		title: __( 'Home', 'wp-plugin-blueprint' ),
 		Component: Home,
 		Icon: grid,
 	},
 	{
 		name: '/marketplace',
-		title: __( 'Marketplace', 'wp-plugin-crazy-domains' ),
+		title: __( 'Marketplace', 'wp-plugin-blueprint' ),
 		Component: Marketplace,
 		Icon: store,
 	},
 	{
 		name: '/performance',
-		title: __( 'Performance', 'wp-plugin-crazy-domains' ),
+		title: __( 'Performance', 'wp-plugin-blueprint' ),
 		Component: Performance,
 		Dashicon: 'performance',
 	},
 	{
 		name: '/settings',
-		title: __( 'Settings', 'wp-plugin-crazy-domains' ),
+		title: __( 'Settings', 'wp-plugin-blueprint' ),
 		Component: Settings,
 		Icon: settings,
 	},
 	{
 		name: '/help',
-		title: __( 'Help', 'wp-plugin-crazy-domains' ),
+		title: __( 'Help', 'wp-plugin-blueprint' ),
 		Component: Help,
 		Icon: help,
 	},

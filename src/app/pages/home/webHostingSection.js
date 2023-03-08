@@ -11,121 +11,121 @@ import {
 
 const WebHostingSection = () => {
 	return (
-		<section className="wppcd-section wppcd-section-home-hosting">
+		<section className="wppb-section wppb-section-home-hosting">
 			<img
 				src={ graphicUrl }
 				className="section-graphic"
-				alt={ __( 'Hosting illustration', 'wp-plugin-crazy-domains' ) }
+				alt={ __( 'Hosting illustration', 'wp-plugin-blueprint' ) }
 			/>
-			<Card size="large" className="wppcd-section-card">
+			<Card size="large" className="wppb-section-card">
 				<CardHeader>
 					<Heading level="3">
-						{ __( 'Web Hosting', 'wp-plugin-crazy-domains' ) }
+						{ __( 'Web Hosting', 'wp-plugin-blueprint' ) }
 					</Heading>
 					<p>
 						{ __(
-							'Access & manage your Crazy Domains account.',
-							'wp-plugin-crazy-domains'
+							'Access & manage your Blueprint account.',
+							'wp-plugin-blueprint'
 						) }
 					</p>
 				</CardHeader>
 				<CardFooter>
-					<div className="wppcd-cardlist-content">
+					<div className="wppb-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="desktop" />{ ' ' }
-							{ __( 'Manage Hosting', 'wp-plugin-crazy-domains' ) }
+							{ __( 'Manage Hosting', 'wp-plugin-blueprint' ) }
 						</Heading>
 						<p>
 							{ __(
 								'Manage site backups, performance options and billing.',
-								'wp-plugin-crazy-domains'
+								'wp-plugin-blueprint'
 							) }
 						</p>
 					</div>
 					<Button
 						variant="primary"
 						href={
-							`https://www.crazydomains.com.au/members/?` +
+							`https://www.blueprint.com.au/members/?` +
 							`&utm_campaign=` +
 							`&utm_content=home_hosting_sites_link` +
 							`&utm_term=manage_sites` +
 							`&utm_medium=brand_plugin` +
-							`&utm_source=wp-admin/admin.php?page=crazy-domains#/home`
+							`&utm_source=wp-admin/admin.php?page=blueprint#/home`
 						}
 						target="_blank"
 						icon="desktop"
 					>
-						{ __( 'Manage Sites', 'wp-plugin-crazy-domains' ) }
+						{ __( 'Manage Sites', 'wp-plugin-blueprint' ) }
 					</Button>
 				</CardFooter>
 				<CardFooter>
-					<div className="wppcd-cardlist-content">
+					<div className="wppb-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="email" />{ ' ' }
-							{ __( 'Email', 'wp-plugin-crazy-domains' ) }
+							{ __( 'Email', 'wp-plugin-blueprint' ) }
 						</Heading>
 						<p>
 							{ __(
 								'Create new email addresses and manage your inbox.',
-								'wp-plugin-crazy-domains'
+								'wp-plugin-blueprint'
 							) }
 						</p>
 					</div>
 					<Button
 						variant="primary"
 						href={
-							`https://www.crazydomains.com.au/members/email-hosting?` +
+							`https://www.blueprint.com.au/members/email-hosting?` +
 							`&utm_campaign=` +
 							`&utm_content=home_hosting_email_link` +
 							`&utm_term=manage_email` +
 							`&utm_medium=brand_plugin` +
-							`&utm_source=wp-admin/admin.php?page=crazy-domains#/home`
+							`&utm_source=wp-admin/admin.php?page=blueprint#/home`
 						}
 						target="_blank"
 						icon="email"
 					>
-						{ __( 'Manage Email', 'wp-plugin-crazy-domains' ) }
+						{ __( 'Manage Email', 'wp-plugin-blueprint' ) }
 					</Button>
 				</CardFooter>
 				<CardFooter>
-					<div className="wppcd-cardlist-content">
+					<div className="wppb-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="admin-site" />{ ' ' }
-							{ __( 'Domains', 'wp-plugin-crazy-domains' ) }
+							{ __( 'Domains', 'wp-plugin-blueprint' ) }
 						</Heading>
 						<p>
 							{ __(
 								'Find fresh domains, point them at sites and get found online.',
-								'wp-plugin-crazy-domains'
+								'wp-plugin-blueprint'
 							) }
 						</p>
 					</div>
 					<Button
 						variant="secondary"
 						href={
-							`https://www.crazydomains.com.au/members/domain-club?` +
+							`https://www.blueprint.com.au/members/domain-club?` +
 							`&utm_campaign=` +
 							`&utm_content=home_hosting_domain_link` +
 							`&utm_term=find_domain` +
 							`&utm_medium=brand_plugin` +
-							`&utm_source=wp-admin/admin.php?page=crazy-domains#/home`
+							`&utm_source=wp-admin/admin.php?page=blueprint#/home`
 						}
 						target="_blank"
 						icon="admin-site"
 					>
-						{ __( 'Find a Domain', 'wp-plugin-crazy-domains' ) }
+						{ __( 'Find a Domain', 'wp-plugin-blueprint' ) }
 					</Button>
 				</CardFooter>
 				<CardFooter>
-					<div className="wppcd-cardlist-content">
+					<div className="wppb-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="sos" />{ ' ' }
-							{ __( 'Help', 'wp-plugin-crazy-domains' ) }
+							{ __( 'Help', 'wp-plugin-blueprint' ) }
 						</Heading>
 						<p>
 							{ __(
 								'Find how-to articles in our Knowledge Base and speak with our award-winning support team.',
-								'wp-plugin-crazy-domains'
+								'wp-plugin-blueprint'
 							) }
 						</p>
 					</div>
@@ -135,7 +135,7 @@ const WebHostingSection = () => {
 						icon="sos"
 						className="callout-link-help"
 					>
-						{ __( 'Get Help', 'wp-plugin-crazy-domains' ) }
+						{ __( 'Get Help', 'wp-plugin-blueprint' ) }
 					</Button>
 				</CardFooter>
 			</Card>

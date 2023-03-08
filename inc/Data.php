@@ -2,19 +2,19 @@
 /**
  * All data retrieval and saving happens from this file.
  *
- * @package WPPluginCrazyDomains
+ * @package WPPluginBlueprint
  */
 
-namespace CrazyDomains;
+namespace Blueprint;
 
 /**
- * \CrazyDomains\Data
+ * \Blueprint\Data
  * This class does not have a constructor to get instantiated, just static methods.
  */
 final class Data {
 
 	/**
-	 * Data loaded onto window.WPPCD
+	 * Data loaded onto window.WPPB
 	 *
 	 * @return array
 	 */
@@ -22,12 +22,12 @@ final class Data {
 		global $wp_version;
 
 		$runtime = array(
-			'url'       => CRAZYDOMAINS_BUILD_URL,
-			'version'   => CRAZYDOMAINS_PLUGIN_VERSION,
+			'url'       => BLUEPRINT_BUILD_URL,
+			'version'   => BLUEPRINT_PLUGIN_VERSION,
 			'resturl'   => \get_home_url() . '/index.php?rest_route=',
 			'wpversion' => $wp_version,
 			'admin'     => \admin_url(),
-			'assets'    => CRAZYDOMAINS_PLUGIN_URL . 'assets/',
+			'assets'    => BLUEPRINT_PLUGIN_URL . 'assets/',
 		);
 
 		return $runtime;

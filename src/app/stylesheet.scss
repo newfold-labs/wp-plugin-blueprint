@@ -27,12 +27,12 @@ html {
     }
 }
 
-body.toplevel_page_crazy-domains {
+body.toplevel_page_blueprint {
     --wp-admin-theme-color: var(--color-primary);
     --wp-admin-theme-color-darker-10: var(--color-primary-dark);
     --wp-admin-theme-color-darker-20: var(--color-title);
     --wp-admin-border-width-focus: 2px;
-    --crazydomainsbrand-focus: inset 0 0 0 1px var(--color-white),0 0 0 var(--wp-admin-border-width-focus) var(--color-primary);
+    --blueprintbrand-focus: inset 0 0 0 1px var(--color-white),0 0 0 var(--wp-admin-border-width-focus) var(--color-primary);
     
     a {
         color: var(--color-link);
@@ -73,14 +73,14 @@ body.toplevel_page_crazy-domains {
     }
 
 }
-.wppcd {
+.wppb {
     color: var(--color-text);
 
     h1, h2, h3, h4, h5, h6 {
         color: var(--color-title);
         font-weight: 700;
     }
-    .wppcd-nav a {
+    .wppb-nav a {
         color: var(--color-black);
     }
     p, div {
@@ -107,7 +107,7 @@ body.toplevel_page_crazy-domains {
         }
 
         &:focus:not(:disabled) {
-            box-shadow: var(--crazydomainsbrand-focus);
+            box-shadow: var(--blueprintbrand-focus);
         }
 
         &.is-primary,
@@ -136,7 +136,7 @@ body.toplevel_page_crazy-domains {
         }
     }
     a:focus {
-        box-shadow: var(--crazydomainsbrand-focus);
+        box-shadow: var(--blueprintbrand-focus);
         outline: 0;
     }
     .components-base-control__help,
@@ -145,11 +145,11 @@ body.toplevel_page_crazy-domains {
         margin-top: 0.25rem;
     }
 }
-.wppcd, .wppcd * {
+.wppb, .wppb * {
     box-sizing: border-box;
 }
 
-.wppcd-app-body {
+.wppb-app-body {
     padding: 18px 24px 0;
     &-inner {
         max-width: 1290px;
@@ -187,7 +187,7 @@ body.toplevel_page_crazy-domains {
     }
 }
 
-.wppcd-app-snackbar {
+.wppb-app-snackbar {
     padding: 0 24px;
     position: relative;
 
@@ -202,7 +202,7 @@ body.toplevel_page_crazy-domains {
     padding-bottom: 26rem;
 }
 
-.wppcd-page-graphic {
+.wppb-page-graphic {
     bottom: 3.5rem;
     opacity: .5;
     position: absolute;
@@ -210,7 +210,7 @@ body.toplevel_page_crazy-domains {
     z-index: -1;
 }
 
-.wppcd {
+.wppb {
     .components-card {
         box-shadow: inset 0px 0px 0px 1px var(--color-border);
 

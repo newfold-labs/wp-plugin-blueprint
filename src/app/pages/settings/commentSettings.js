@@ -1,7 +1,7 @@
 import AppStore from '../../data/store';
 import { Heading, ErrorCard } from '../../components';
 import {
-	crazydomainsSettingsApiFetch,
+	blueprintSettingsApiFetch,
 	dispatchUpdateSnackbar,
 } from '../../util/helpers';
 import { _n } from '@wordpress/i18n';
@@ -31,21 +31,21 @@ const CommentSettings = () => {
 
 	const disableCommentsHelpText = () => {
 		return disableCommentsOldPosts
-			? __( 'Comments on old posts are disabled.', 'wp-plugin-crazy-domains' )
-			: __( 'Comments are allowed on old posts.', 'wp-plugin-crazy-domains' );
+			? __( 'Comments on old posts are disabled.', 'wp-plugin-blueprint' )
+			: __( 'Comments are allowed on old posts.', 'wp-plugin-blueprint' );
 	};
 	const disableCommentsNoticeText = () => {
 		return disableCommentsOldPosts
-			? __( 'Old post comments disabled.', 'wp-plugin-crazy-domains' )
-			: __( 'Old post comments enabled.', 'wp-plugin-crazy-domains' );
+			? __( 'Old post comments disabled.', 'wp-plugin-blueprint' )
+			: __( 'Old post comments enabled.', 'wp-plugin-blueprint' );
 	};
 	const closeCommentsLabelText = () => {
 		// `Close comments after ${closeCommentsDays} day(s)`
 		return (
 			<span>
-				{ __( 'Close comments after ', 'wp-plugin-crazy-domains' ) }
+				{ __( 'Close comments after ', 'wp-plugin-blueprint' ) }
 				<strong>{ closeCommentsDays }</strong>
-				{ _n( ' day.', ' days.', closeCommentsDays, 'wp-plugin-crazy-domains' ) }
+				{ _n( ' day.', ' days.', closeCommentsDays, 'wp-plugin-blueprint' ) }
 			</span>
 		);
 	};
@@ -55,31 +55,31 @@ const CommentSettings = () => {
 			<span>
 				{ __(
 					'Comments on posts are disabled after ',
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 				) }
 				<strong>{ closeCommentsDays }</strong>
-				{ _n( ' day.', ' days.', closeCommentsDays, 'wp-plugin-crazy-domains' ) }
+				{ _n( ' day.', ' days.', closeCommentsDays, 'wp-plugin-blueprint' ) }
 			</span>
 		);
 	};
 	const closeCommentsNoticeText = () => {
 		return (
-			__( 'Disabled comments on posts older than ', 'wp-plugin-crazy-domains' ) +
+			__( 'Disabled comments on posts older than ', 'wp-plugin-blueprint' ) +
 			closeCommentsDays +
-			_n( ' day.', ' days.', closeCommentsDays, 'wp-plugin-crazy-domains' )
+			_n( ' day.', ' days.', closeCommentsDays, 'wp-plugin-blueprint' )
 		);
 	};
 	const commentsPerPageLabelText = () => {
 		// `Display ${commentsPerPage} comment(s) per page`
 		return (
 			<span>
-				{ __( 'Display ', 'wp-plugin-crazy-domains' ) }
+				{ __( 'Display ', 'wp-plugin-blueprint' ) }
 				<strong>{ commentsPerPage }</strong>
 				{ _n(
 					' comment per page.',
 					' comments per page.',
 					commentsPerPage,
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 				) }
 			</span>
 		);
@@ -88,22 +88,22 @@ const CommentSettings = () => {
 		//`Posts will display ${commentsPerPage} comments at a time.`
 		return (
 			<span>
-				{ __( 'Posts will display ', 'wp-plugin-crazy-domains' ) }
+				{ __( 'Posts will display ', 'wp-plugin-blueprint' ) }
 				<strong>{ commentsPerPage }</strong>
 				{ _n(
 					' comment at a time.',
 					' comments at a time.',
 					commentsPerPage,
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 				) }
 			</span>
 		);
 	};
 	const commentsPerPageNoticeText = () => {
-		return __( 'Comments per page setting saved.', 'wp-plugin-crazy-domains' );
+		return __( 'Comments per page setting saved.', 'wp-plugin-blueprint' );
 	};
 	useUpdateEffect( () => {
-		crazydomainsSettingsApiFetch(
+		blueprintSettingsApiFetch(
 			{
 				disableCommentsOldPosts: disableCommentsOldPosts
 					? 'true'
@@ -121,7 +121,7 @@ const CommentSettings = () => {
 	}, [ disableCommentsOldPosts ] );
 
 	useUpdateEffect( () => {
-		crazydomainsSettingsApiFetch( { closeCommentsDays }, setError, ( response ) => {
+		blueprintSettingsApiFetch( { closeCommentsDays }, setError, ( response ) => {
 			setStore( {
 				...store,
 				closeCommentsDays,
@@ -131,7 +131,7 @@ const CommentSettings = () => {
 	}, [ closeCommentsDays ] );
 
 	useUpdateEffect( () => {
-		crazydomainsSettingsApiFetch( { commentsPerPage }, setError, ( response ) => {
+		blueprintSettingsApiFetch( { commentsPerPage }, setError, ( response ) => {
 			setStore( {
 				...store,
 				commentsPerPage,
@@ -147,13 +147,13 @@ const CommentSettings = () => {
 		<Card className="card-comment-settings">
 			<CardHeader>
 				<Heading level="3">
-					{ __( 'Comments', 'wp-plugin-crazy-domains' ) }
+					{ __( 'Comments', 'wp-plugin-blueprint' ) }
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{ __(
 					'Make blog post comments disabled on older posts and control how many to display.',
-					'wp-plugin-crazy-domains'
+					'wp-plugin-blueprint'
 				) }
 			</CardBody>
 			<CardBody className="disable-comments-setting">
@@ -162,7 +162,7 @@ const CommentSettings = () => {
 					className="disable-comments-toggle"
 					label={ __(
 						'Disable comments for older posts',
-						'wp-plugin-crazy-domains'
+						'wp-plugin-blueprint'
 					) }
 					help={ disableCommentsHelpText() }
 					onChange={ () => {
