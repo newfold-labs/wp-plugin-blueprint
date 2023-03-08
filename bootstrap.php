@@ -49,6 +49,15 @@ $blueprint_module_container->set(
 	)
 );
 
+// BLUEPRINT to show products in marketplace for a different brand, 
+// this should be updated or removed once a proper brand exists in hiive 
+// for this plugin. This is placeholder now so that the blueprint plugin 
+// can display some marketplace products.
+$blueprint_module_container->set(
+	'marketplace_brand',
+	'bluehost'
+);
+
 // Set coming soon values
 $blueprint_module_container->set(
 	'comingsoon',
