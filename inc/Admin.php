@@ -20,6 +20,8 @@ final class Admin {
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
 		/* Load Page Scripts & Styles. */
 		\add_action( 'load-toplevel_page_blueprint', array( __CLASS__, 'assets' ) );
+		/* Load i18 files */
+		\add_action( 'init', array( __CLASS__, 'load_text_domain' ), 100 );
 		/* Add Links to WordPress Plugins list item. */
 		\add_filter( 'plugin_action_links_wp-plugin-blueprint/wp-plugin-blueprint.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
@@ -140,6 +142,12 @@ final class Admin {
 			true
 		);
 
+		\wp_set_script_translations(
+			'blueprint-script',
+			'wp-plugin-blueprint',
+			BLUEPRINT_PLUGIN_DIR . '/languages'
+		);
+
 		include BLUEPRINT_PLUGIN_DIR . '/inc/Data.php';
 		\wp_add_inline_script(
 			'blueprint-script',
@@ -159,6 +167,26 @@ final class Admin {
 			\wp_enqueue_script( 'blueprint-script' );
 			\wp_enqueue_style( 'blueprint-style' );
 		}
+	}
+
+	/**
+	 * Load text domain for plugin
+	 *
+	 * @return void
+	 */
+	public static function load_text_domain() {
+
+		\load_plugin_textdomain(
+			'wp-plugin-blueprint',
+			false,
+			BLUEPRINT_PLUGIN_DIR . '/languages'
+		);
+
+		\load_script_textdomain(
+			'blueprint-script',
+			'wp-plugin-blueprint',
+			BLUEPRINT_PLUGIN_DIR . '/languages'
+		);
 	}
 
 	/**
