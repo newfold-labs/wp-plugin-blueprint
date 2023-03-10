@@ -75,7 +75,7 @@ final class Admin {
 			__( 'Blueprint', 'wp-plugin-blueprint' ),
 			__( 'Blueprint', 'wp-plugin-blueprint' ),
 			'manage_options',
-			'blueprint',  
+			'blueprint',
 			array( __CLASS__, 'render' ),
 			$blueprint_icon,
 			0
