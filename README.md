@@ -31,3 +31,6 @@ This plugin has version number set in 3 distinct places in 2 files:
   the release files within a matching version directory for convenient cache busting. All 3 instances need to be
   incremented in conjuction with new releases via github tagging.
   (In a perfect world, we have a runner increment and/or validate this)
+
+# Style and Design
+See this [figma for a style guide](https://www.figma.com/file/Kkjaez0IKO35efVYnH56gM/WP-Plugin-Print?t=1hu7gmAtKTmsKNvD-1)
