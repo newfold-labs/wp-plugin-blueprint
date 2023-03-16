@@ -47,7 +47,7 @@
         "@wordpress/i18n": "^4.29.0",
         "@wordpress/icons": "^9.20.0",
         "classnames": "^2.3.2",
-        "jquery": "^3.5.1",
+        "jquery": "^3.6.4",
         "lodash": "^4.17.21",
         "react": "^16.9.0",
         "react-error-boundary": "^3.1.1",
