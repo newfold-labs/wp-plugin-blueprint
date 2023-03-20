@@ -41,7 +41,7 @@
         "srb": "npm run simulate-runner-build"
     },
     "dependencies": {
-        "@wordpress/compose": "^5.0.6",
+        "@wordpress/compose": "^6.6.0",
         "@wordpress/dom-ready": "^3.29.0",
         "@wordpress/element": "^4.20.0",
         "@wordpress/i18n": "^4.29.0",
