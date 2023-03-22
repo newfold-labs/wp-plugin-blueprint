@@ -14,7 +14,7 @@
  * Version:           0.1.0
  * Requires at least: 4.7
  * Requires PHP:      5.6
- * Tested up to:      6.1.1
+ * Tested up to:      6.2
  * Author:            Blueprint
  * Author URI:        https://blueprint.com
  * Text Domain:       wp-plugin-blueprint
