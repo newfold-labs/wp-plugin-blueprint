@@ -1,4 +1,6 @@
 import './stylesheet.scss';
+import './tailwind.pcss';
+
 
 import AppStore, { AppStoreProvider } from './data/store';
 import { useLocation, HashRouter as Router } from 'react-router-dom';
@@ -14,6 +16,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
 import { kebabCase, filter } from 'lodash';
+import { Root, Alert } from "@yoast/ui-library";
 
 // component sourced from module
 import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-module-notifications/assets/js/components/notifications/';
@@ -105,9 +108,17 @@ const AppBody = ( props ) => {
 
 export const App = () => (
 	<AppStoreProvider>
-		<Router>
-			<AppBody />
-		</Router>
+		<Root context={ { isRtl: false } }>
+			<Router>
+			<h1 className="yst-px-3 yst-mb-6 yst-space-y-6">
+      			Hello world!
+			</h1>
+				<Alert variant="success">
+					Congrats! You've successfully setup the UI library.
+				</Alert>
+				<AppBody />
+			</Router>
+		</Root>
 	</AppStoreProvider>
 );
 
