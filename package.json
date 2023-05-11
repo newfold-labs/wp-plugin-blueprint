@@ -44,6 +44,7 @@
         "srb": "npm run simulate-runner-build"
     },
     "dependencies": {
+        "@heroicons/react": "^2.0.18",
         "@reduxjs/toolkit": "^1.9.5",
         "@wordpress/compose": "^6.7.0",
         "@wordpress/dom-ready": "^3.30.0",

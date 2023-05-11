@@ -5,3 +5,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	.yst-root {
+
+		a {
+			@apply
+			yst-no-underline	
+			yst-text-primary
+			hover:yst-text-primary-dark
+			focus:yst-text-primary-dark
+			focus:yst-outline-none
+			focus:yst-ring-1
+			focus:yst-ring-offset-1
+			focus:yst-ring-offset-transparent
+			focus:yst-ring-primary-dark
+			focus:yst-rounded-sm
+			visited:yst-text-primary
+			visited:hover:yst-text-primary-dark;
+		}
+
+	}
+}

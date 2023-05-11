@@ -1,7 +1,6 @@
 import './stylesheet.scss';
 import './tailwind.pcss';
 
-
 import AppStore, { AppStoreProvider } from './data/store';
 import { useLocation, HashRouter as Router } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
@@ -23,6 +22,7 @@ import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-mo
 // to pass to notifications module
 import apiFetch from '@wordpress/api-fetch';
 import { useState } from '@wordpress/element';
+import { SideNav } from './components/sideNav';
 
 const Notices = () => {
 	if ( 'undefined' === typeof noticesStore ) {
@@ -74,7 +74,7 @@ const AppBody = ( props ) => {
 				props.className
 			) }
 		>
-			<Header />
+			{/* <Header /> */}
 			<NewfoldNotifications
 				constants={{
 					context: 'blueprint-plugin',
@@ -110,13 +110,10 @@ export const App = () => (
 	<AppStoreProvider>
 		<Root context={ { isRtl: false } }>
 			<Router>
-			<h1 className="yst-px-3 yst-mb-6 yst-space-y-6">
-      			Hello world!
-			</h1>
-				<Alert variant="success">
-					Congrats! You've successfully setup the UI library.
-				</Alert>
-				<AppBody />
+				<div className="wppb-app-container yst-p-4 min-[783px]:yst-p-8 yst-flex yst-gap-4">
+					<SideNav />
+					<AppBody />
+				</div>
 			</Router>
 		</Root>
 	</AppStoreProvider>
