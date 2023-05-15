@@ -1,5 +1,5 @@
 import { Button } from '@wordpress/components';
-import { Heading } from '../../components';
+import { Heading } from '..';
 import { ReactComponent as Brand } from '../../../../assets/svg/blueprint-logo.svg';
 import { delay } from 'lodash';
 

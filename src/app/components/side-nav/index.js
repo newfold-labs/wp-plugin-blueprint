@@ -5,7 +5,7 @@ import { topRoutes, utilityRoutes } from "../../data/routes";
 
 export const SideNavHeader = () => {
     return (
-        <header className="yst-px-3 yst-mb-6 yst-space-y-6">
+        <header className="yst-pt-2 yst-px-3 yst-mb-6 yst-space-y-6">
             <Logo />
         </header>
     );
@@ -50,20 +50,53 @@ export const SideNavMenu = () => {
         );
     }
 
+    const SubMenusManager = () => {
+        // close any open submenus
+        const subMenus = document.querySelectorAll('.wppb-app-navitem-submenu');
+        subMenus.forEach((subMenu) => {
+            subMenu.classList.add('yst-hidden');
+        });
+
+        // open active's submenu if it exists
+        const activeMenu = document.querySelector('.wppb-app-sidenav .active');
+        if (null !== activeMenu.nextSibling && activeMenu.nextSibling.classList.contains('wppb-app-navitem-submenu')) {
+            activeMenu.nextSibling.classList.toggle('yst-hidden');
+        }
+    }
+
+    useEffect(() => {
+        SubMenusManager();
+        document.onclick = SubMenusManager;
+    });
+
     return (
         <div className="yst-px-0.5 yst-space-y-6">
-
             {primaryMenu()}
             {secondaryMenu()}
-
         </div>
     );
 }
 
 export const SideNavMenuItem = ({ label, name, icon: Icon = null, path, subItems }) => {
+    const subMenuToggle = (e) => {
+        // close any open submenus
+        const subMenus = document.querySelectorAll('.wppb-app-navitem-submenu');
+        subMenus.forEach((subMenu) => {
+            subMenu.classList.add('yst-hidden');
+        });
+
+        // open target submenu if it exists
+        if (null !== e.target.nextSibling && e.target.nextSibling.classList.contains('wppb-app-navitem-submenu')) {
+            e.target.nextSibling.classList.toggle('yst-hidden');
+        }
+    }
+
     return (
         <li className="yst-mb-0">
-            <NavLink to={path} className={`wppb-app-navitem wppb-app-navitem-${name} yst-flex yst-items-center yst-gap-3 yst-px-3 yst-py-2 yst-rounded-md yst-text-sm yst-font-medium yst-text-title leading-none hover:yst-bg-slate-50 [&.active]:yst-bg-[#E2E8F0]`}>
+            <NavLink
+                to={path}
+                className={`wppb-app-navitem wppb-app-navitem-${name} yst-flex yst-items-center yst-gap-3 yst-px-3 yst-py-2 yst-rounded-md yst-text-sm yst-font-medium yst-text-title leading-none hover:yst-bg-slate-50 [&.active]:yst-bg-[#E2E8F0]`}
+            >
                 {Icon &&
                     <Icon className="yst-flex-shrink-0 yst--ml-1 yst-h-6 yst-w-6" />
                 }
@@ -71,7 +104,7 @@ export const SideNavMenuItem = ({ label, name, icon: Icon = null, path, subItems
             </NavLink>
 
             {subItems && subItems.length > 0 &&
-                <ul className="yst-ml-8 yst-m-2 yst-space-y-1.5">
+                <ul className="wppb-app-navitem-submenu yst-hidden yst-ml-8 yst-m-2 yst-space-y-1.5">
                     {subItems.map((subItem) => (
                         <SideNavMenuSubItem
                             label={subItem.title}

@@ -11,7 +11,9 @@ import Home from '../pages/home';
 import Marketplace from '../pages/marketplace';
 import Settings from '../pages/settings';
 import Performance from '../pages/performance';
+import Example from '../pages/example';
 import Help from '../pages/help';
+
 
 export const AppRoutes = () => {
 	return (
@@ -48,6 +50,7 @@ const topRoutePaths = [
 	'/marketplace',
 	'/performance',
 	'/settings',
+	'/example',
 ];
 const utilityRoutePaths = [ '/help' ];
 
@@ -97,6 +100,12 @@ export const routes = [
 		name: '/settings',
 		title: __( 'Settings', 'wp-plugin-blueprint' ),
 		Component: Settings,
+		Icon: AdjustmentsHorizontalIcon,
+	},
+	{
+		name: '/example',
+		title: __( 'Example', 'wp-plugin-blueprint' ),
+		Component: Example,
 		Icon: AdjustmentsHorizontalIcon,
 	},
 	{
