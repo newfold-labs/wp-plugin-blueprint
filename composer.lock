@@ -217,23 +217,25 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.3",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "6fb2387855bb334f62e924c79d57e58028b45207"
+                "reference": "0beb5f1ff46373e1b982bee52b70ceed0c00584b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/6fb2387855bb334f62e924c79d57e58028b45207",
-                "reference": "6fb2387855bb334f62e924c79d57e58028b45207",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/0beb5f1ff46373e1b982bee52b70ceed0c00584b",
+                "reference": "0beb5f1ff46373e1b982bee52b70ceed0c00584b",
                 "shasum": ""
             },
             "require": {
+                "wp-forge/wp-query-builder": "^1.0",
+                "wp-forge/wp-upgrade-handler": "^1.0",
                 "wpscholar/url": "^1.2"
             },
             "require-dev": {
-                "bluehost/wp-php-standards": "^1.1"
+                "newfold-labs/wp-php-standards": "^1.2"
             },
             "type": "library",
             "autoload": {
@@ -246,10 +248,10 @@
             },
             "scripts": {
                 "fix": [
-                    "vendor/bin/phpcbf . --standard=Bluehost"
+                    "vendor/bin/phpcbf . --standard=phpcs.xml"
                 ],
                 "lint": [
-                    "vendor/bin/phpcs . --standard=Bluehost -s"
+                    "vendor/bin/phpcs . --standard=phpcs.xml -s"
                 ]
             },
             "license": [
@@ -257,10 +259,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.3",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.0",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-03-10T22:26:03+00:00"
+            "time": "2023-07-06T15:44:09+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
@@ -895,6 +897,51 @@
                 "source": "https://github.com/wp-forge/wp-options/tree/1.1"
             },
             "time": "2022-03-04T16:23:42+00:00"
+        },
+        {
+            "name": "wp-forge/wp-query-builder",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-forge/wp-query-builder.git",
+                "reference": "34959e5618969afd8350a8206744a7810d9f253b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-forge/wp-query-builder/zipball/34959e5618969afd8350a8206744a7810d9f253b",
+                "reference": "34959e5618969afd8350a8206744a7810d9f253b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WP_Forge\\QueryBuilder\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@wpscholar.com"
+                }
+            ],
+            "description": "A lightweight and efficient SQL query builder for WordPress.",
+            "keywords": [
+                "database",
+                "query builder",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/wp-forge/wp-query-builder/issues",
+                "source": "https://github.com/wp-forge/wp-query-builder/tree/1.0.3"
+            },
+            "time": "2023-04-29T19:26:54+00:00"
         },
         {
             "name": "wp-forge/wp-update-handler",
