@@ -72,7 +72,8 @@ jobs:
 
       - name: Check if there are file changes
         id: changes
-        uses: UnicornGlobal/has-changes-action@v1.0.12
+        continue-on-error: true
+        run: git diff --exit-code
 
       - name: Commit web files
         if: steps.changes.outputs.changed == 1
