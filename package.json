@@ -49,7 +49,7 @@
         "build": "wp-scripts build",
         "check-engines": "wp-scripts check-engines",
         "check-licenses": "wp-scripts check-licenses --production",
-        "create:dist": "rsync -r --exclude-from=.distignore . ./wp-plugin-blueprint",
+        "create:dist": "rsync -r --include-from=.distinclude --exclude-from=.distignore . ./wp-plugin-blueprint",
         "create:zip": "cd ./wp-plugin-blueprint && zip -r -9 ../wp-plugin-blueprint.zip . && ls -lh ../wp-plugin-blueprint.zip",
         "cypress": "npm cypress open",
         "cypress:record": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) npx cypress run --browser 'Replay Chromium'",
