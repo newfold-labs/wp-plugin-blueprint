@@ -3,7 +3,7 @@
 describe('Navigation', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=blueprint');
+		cy.visit('/wp-admin/admin.php?page=' + Cypress.env('pluginId') );
 		cy.injectAxe();
 		
 	});
@@ -16,10 +16,10 @@ describe('Navigation', function () {
 	
 	it('Admin Subnav properly highlights', () => {
 		cy
-			.get('#adminmenu #toplevel_page_blueprint')
+			.get('#adminmenu #toplevel_page_' + Cypress.env('pluginId'))
 			.should('have.class', 'wp-has-current-submenu');
 		cy
-			.get('#adminmenu #toplevel_page_blueprint ul.wp-submenu li.current a')
+			.get('#adminmenu #toplevel_page_' + Cypress.env('pluginId') + ' ul.wp-submenu li.current a')
 			.should('have.attr', 'href')
 			.and('match', /home/);
 	});
@@ -36,7 +36,7 @@ describe('Navigation', function () {
 			.get('.link-Marketplace')
 			.should('have.class', 'active');
 		cy
-			.get('#adminmenu #toplevel_page_blueprint ul.wp-submenu li.current a')
+			.get('#adminmenu #toplevel_page_' + Cypress.env('pluginId') + ' ul.wp-submenu li.current a')
 			.should('have.attr', 'href')
 			.and('match', /marketplace/);
 
@@ -50,7 +50,7 @@ describe('Navigation', function () {
 			.get('.link-Marketplace')
 			.should('not.have.class', 'active');
 		cy
-			.get('#adminmenu #toplevel_page_blueprint ul.wp-submenu li.current a')
+			.get('#adminmenu #toplevel_page_' + Cypress.env('pluginId') + ' ul.wp-submenu li.current a')
 			.should('have.attr', 'href')
 			.and('match', /performance/);
 
@@ -58,7 +58,7 @@ describe('Navigation', function () {
 		cy.wait(500);
 		cy.hash().should('eq', '#/settings');
 		cy
-			.get('#adminmenu #toplevel_page_blueprint ul.wp-submenu li.current a')
+			.get('#adminmenu #toplevel_page_' + Cypress.env('pluginId') + ' ul.wp-submenu li.current a')
 			.should('have.attr', 'href')
 			.and('match', /settings/);
 	});
@@ -115,8 +115,8 @@ describe('Navigation', function () {
 		cy.get('.mobile-toggle').click();
 		cy.wait(500);
 		cy.get('.mobile-link-Home').should('be.visible');
-		cy.get('button[aria-label="Close"]').should('be.visible')
-		cy.get('button[aria-label="Close"]').click();
+		cy.get('button[aria-label="Close Navigation"]').should('be.visible');
+		cy.get('button[aria-label="Close Navigation"]').click();
 		cy.get('.mobile-link-Home').should('not.exist');
 	});
 });
