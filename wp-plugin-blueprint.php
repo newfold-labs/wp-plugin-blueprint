@@ -10,11 +10,12 @@
  * @wordpress-plugin
  * Plugin Name:       The Blueprint Plugin
  * Plugin URI:        https://blueprint.com
+ * Update URI:        https://github.com/newfold-labs/wp-plugin-blueprint/
  * Description:       WordPress plugin that integrates a WordPress site with the Blueprint control panel, including performance, security, and update features.
  * Version:           0.1.0
  * Requires at least: 4.7
  * Requires PHP:      5.6
- * Tested up to:      6.2
+ * Tested up to:      6.3.2
  * Author:            Blueprint
  * Author URI:        https://blueprint.com
  * Text Domain:       wp-plugin-blueprint
