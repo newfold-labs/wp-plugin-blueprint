@@ -12,7 +12,7 @@
  * Plugin URI:        https://blueprint.com
  * Update URI:        https://github.com/newfold-labs/wp-plugin-blueprint/
  * Description:       WordPress plugin that integrates a WordPress site with the Blueprint control panel, including performance, security, and update features.
- * Version:           0.1.0
+ * Version:           1.0.0
  * Requires at least: 4.7
  * Requires PHP:      5.6
  * Tested up to:      6.3.2
@@ -32,7 +32,7 @@ if ( defined( 'BLUEPRINT_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'BLUEPRINT_PLUGIN_VERSION', '0.1.0' );
+define( 'BLUEPRINT_PLUGIN_VERSION', '1.0.0' );
 define( 'BLUEPRINT_PLUGIN_FILE', __FILE__ );
 define( 'BLUEPRINT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BLUEPRINT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

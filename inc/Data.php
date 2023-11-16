@@ -14,20 +14,18 @@ namespace Blueprint;
 final class Data {
 
 	/**
-	 * Data loaded onto window.WPPB
+	 * Data loaded onto window.NewfoldRuntime
 	 *
 	 * @return array
 	 */
 	public static function runtime() {
-		global $wp_version;
+		global $blueprint_module_container;
 
 		$runtime = array(
-			'url'       => BLUEPRINT_BUILD_URL,
-			'version'   => BLUEPRINT_PLUGIN_VERSION,
-			'resturl'   => \get_home_url() . '/index.php?rest_route=',
-			'wpversion' => $wp_version,
-			'admin'     => \admin_url(),
-			'assets'    => BLUEPRINT_PLUGIN_URL . 'assets/',
+			'url'     => BLUEPRINT_BUILD_URL,
+			'version' => BLUEPRINT_PLUGIN_VERSION,
+			'assets'  => BLUEPRINT_PLUGIN_URL . 'assets/',
+			'brand'   => $blueprint_module_container->plugin()->brand,
 		);
 
 		return $runtime;

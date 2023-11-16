@@ -133,7 +133,6 @@ require BLUEPRINT_PLUGIN_DIR . '/inc/AdminBar.php';
 require BLUEPRINT_PLUGIN_DIR . '/inc/base.php';
 require BLUEPRINT_PLUGIN_DIR . '/inc/jetpack.php';
 require BLUEPRINT_PLUGIN_DIR . '/inc/partners.php';
-require BLUEPRINT_PLUGIN_DIR . '/inc/performance.php';
 require BLUEPRINT_PLUGIN_DIR . '/inc/RestApi/CachingController.php';
 require BLUEPRINT_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require BLUEPRINT_PLUGIN_DIR . '/inc/RestApi/rest-api.php';

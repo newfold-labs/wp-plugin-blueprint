@@ -1,5 +1,5 @@
 import { Button } from '@wordpress/components';
-import { Heading } from '../../components';
+import { Heading } from '..';
 import { ReactComponent as Brand } from '../../../../assets/svg/blueprint-logo.svg';
 import { delay } from 'lodash';
 
@@ -15,10 +15,9 @@ const Mark = () => {
 	return (
 		<Button
 			icon={ <Brand className="wppb-logo" /> }
-			style={ { height: '39px' } }
-			iconSize={ 39 }
+			style={ { width: '160px', height: 'auto' } }
 			onMouseUp={ defocus }
-			className="logo-mark"
+			className="logo-mark nfd-p-0"
 			href="#/home"
 		/>
 	);
@@ -29,7 +28,7 @@ const Logo = () => {
 		<div className="wppb-logo-wrap">
 			<Mark />
 			<Heading level="2" className="screen-reader-text">
-				{ __( 'Blueprint WordPress Plugin', 'wp-plugin-blueprint' ) }
+				{ __( 'blueprint WordPress Plugin', 'wp-plugin-blueprint' ) }
 			</Heading>
 		</div>
 	);

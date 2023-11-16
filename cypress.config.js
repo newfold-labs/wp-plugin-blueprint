@@ -82,9 +82,6 @@ module.exports = defineConfig({
 		excludeSpecPattern: [
 			"vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/",
 			"vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/wp-module-support/",
-			"vendor/newfold-labs/wp-module-coming-soon/tests/cypress/integration/", // skip until ui update and modules can update
-			"vendor/newfold-labs/wp-module-marketplace/tests/cypress/integration/", // skip until ui update and modules can update
-			"vendor/newfold-labs/wp-module-performance/tests/cypress/integration/", // skip until ui update and modules can update
 		],
     supportFile: 'tests/cypress/support/index.js',
     testIsolation: false,
