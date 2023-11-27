@@ -1,5 +1,7 @@
 import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
+import { addQueryArgs } from '@wordpress/url';
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 
 let lastNoticeId;
 const W_NAV = document.querySelector( '#toplevel_page_blueprint .wp-submenu' );
@@ -80,7 +82,7 @@ export const dispatchUpdateSnackbar = ( text = 'Settings Saved' ) => {
 export const blueprintSettingsApiFetch = ( data, passError, thenCallback ) => {
 	return apiFetch( {
 		// path: 'blueprint/v1/settings', //  can't use path bacause it breaks on temp domains
-		url: window.WPPB.resturl + '/blueprint/v1/settings',
+		url: NewfoldRuntime.createApiUrl('/blueprint/v1/settings'),
 		method: 'POST',
 		data,
 	} )
@@ -102,7 +104,7 @@ export const blueprintSettingsApiFetch = ( data, passError, thenCallback ) => {
  */
 export const blueprintPurgeCacheApiFetch = ( data, passError, thenCallback ) => {
 	return apiFetch( {
-		url: window.WPPB.resturl + '/blueprint/v1/caching',
+		url: NewfoldRuntime.createApiUrl('/blueprint/v1/caching'),
 		method: 'DELETE',
 		data,
 	} )
@@ -130,3 +132,21 @@ export const comingSoonAdminbarToggle = ( comingSoon ) => {
 		comingsoonadminbar.classList.remove( 'hideme' );
 	}
 };
+
+/**
+ * Decorates an external link URL with UTM params.
+ *
+ * The utm_term, if passed, should be the link anchor text.
+ * The utm_content should be the unique identifier for the link.
+ * The utm_campaign is optional and reserved for special occasions.
+ *
+ * @param {string} url The original URL.
+ * @param {Object} params The URL parameters to add.
+ *
+ * @return {string} The new URL.
+ */
+export const addUtmParams = (url, params = {}) => {
+	params.utm_source = `wp-admin/admin.php?page=blueprint${window.location.hash}`;
+	params.utm_medium = 'blueprint_plugin';
+	return addQueryArgs(url, params);
+}
