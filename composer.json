@@ -63,7 +63,7 @@
         "newfold-labs/wp-module-notifications": "^1.1.5",
         "newfold-labs/wp-module-onboarding": "^1.2.0",
         "newfold-labs/wp-module-performance": "^1.1.1",
-        "newfold-labs/wp-module-runtime": "^1.0.5",
+        "newfold-labs/wp-module-runtime": "^1.0.7",
         "newfold-labs/wp-module-secure-passwords": "^1.1",
         "newfold-labs/wp-module-sso": "^1.0.3",
         "wp-forge/wp-update-handler": "^1.0",
