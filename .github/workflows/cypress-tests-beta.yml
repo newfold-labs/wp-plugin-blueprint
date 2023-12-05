@@ -100,7 +100,7 @@ jobs:
 
       - name: Run Cypress Tests
         if: ${{ github.repository == 'newfold-labs/wp-plugin-blueprint' }}
-        run: npm run test:e2e -- --browser chrome --tag "blueprint, wp-beta"
+        run: npm run test:e2e -- --browser chrome
 
       - name: Store screenshots of test failures
         if: failure()
