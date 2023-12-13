@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4333cb0a72935fb6ef906edcc36af08b",
+    "content-hash": "9fc546bc5f8e954398d63b223d6cc165",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -216,16 +216,16 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.4.11",
+            "version": "2.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "c244dd52e7e07bf0d890e51892e179c62f197bac"
+                "reference": "1bfc538c2f7c282175ddcd9b4513bcbe85facbbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/c244dd52e7e07bf0d890e51892e179c62f197bac",
-                "reference": "c244dd52e7e07bf0d890e51892e179c62f197bac",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/1bfc538c2f7c282175ddcd9b4513bcbe85facbbe",
+                "reference": "1bfc538c2f7c282175ddcd9b4513bcbe85facbbe",
                 "shasum": ""
             },
             "require": {
@@ -258,10 +258,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.11",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.15",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-11-13T19:54:44+00:00"
+            "time": "2023-12-12T21:28:52+00:00"
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
@@ -3199,5 +3199,5 @@
     "platform-overrides": {
         "php": "7.0.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
