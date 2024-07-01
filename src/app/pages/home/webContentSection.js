@@ -11,7 +11,7 @@ const WebContentSection = () => {
 				<ActionField
 					label={__("Blog", "wp-plugin-blueprint")}
 					buttonLabel={__("New Post", "wp-plugin-blueprint")}
-					href={window.NewfoldRuntime.admin_url + 'post-new.php'}
+					href={window.NewfoldRuntime.adminUrl + 'post-new.php'}
 					className={"wppb-app-home-blog-action"}
 				>
 					{__('Write a new blog post.', 'wp-plugin-blueprint')}
@@ -20,7 +20,7 @@ const WebContentSection = () => {
 				<ActionField
 					label={__("Pages", "wp-plugin-blueprint")}
 					buttonLabel={__("New Page", "wp-plugin-blueprint")}
-					href={window.NewfoldRuntime.admin_url + 'post-new.php?post_type=page'}
+					href={window.NewfoldRuntime.adminUrl + 'post-new.php?post_type=page'}
 					className={"wppb-app-home-pages-action"}
 				>
 					{__('Add fresh pages to your website.', 'wp-plugin-blueprint')}
@@ -29,7 +29,7 @@ const WebContentSection = () => {
 				<ActionField
 					label={__("Categories", "wp-plugin-blueprint")}
 					buttonLabel={__("Manage Categories", "wp-plugin-blueprint")}
-					href={window.NewfoldRuntime.admin_url + 'edit-tags.php?taxonomy=category'}
+					href={window.NewfoldRuntime.adminUrl + 'edit-tags.php?taxonomy=category'}
 					className={"wppb-app-home-categories-action"}
 				>
 					{__('Organize existing content into categories.', 'wp-plugin-blueprint')}
