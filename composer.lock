@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4333cb0a72935fb6ef906edcc36af08b",
+    "content-hash": "4814d343bf8b7ccb6f211069065cc887",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3133,16 +3133,16 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "6.3.1",
+            "version": "6.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
-                "reference": "4797791a311c41d213027333e4fcc48073f77df0"
+                "reference": "a33d328dab5a4a9ddf0c560bcadbabb58b5ee67f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/4797791a311c41d213027333e4fcc48073f77df0",
-                "reference": "4797791a311c41d213027333e4fcc48073f77df0",
+                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/a33d328dab5a4a9ddf0c560bcadbabb58b5ee67f",
+                "reference": "a33d328dab5a4a9ddf0c560bcadbabb58b5ee67f",
                 "shasum": ""
             },
             "type": "library",
@@ -3177,7 +3177,7 @@
                 "issues": "https://github.com/wp-phpunit/issues",
                 "source": "https://github.com/wp-phpunit/wp-phpunit"
             },
-            "time": "2023-08-09T01:26:57+00:00"
+            "time": "2025-04-16T01:40:54+00:00"
         }
     ],
     "aliases": [
