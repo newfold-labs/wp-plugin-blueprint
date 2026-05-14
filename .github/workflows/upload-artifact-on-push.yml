@@ -27,6 +27,7 @@ jobs:
     permissions:
       contents: read       # Required to clone the private repository.
       actions: write       # Required for actions/cache and for actions/upload-artifact.
+    timeout-minutes: 45
     steps:
 
       - name: Checkout

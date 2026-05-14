@@ -23,6 +23,7 @@ jobs:
     permissions:
       contents: write      # Required to clone the repo and upload the release zip with actions/upload-release-asset.
       actions: write       # Required for actions/cache to save and restore npm and Composer caches.
+    timeout-minutes: 45
     steps:
 
       - name: Checkout

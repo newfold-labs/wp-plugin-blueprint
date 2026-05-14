@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {} # Steps only purge Cloudflare cache; no GITHUB_TOKEN GitHub API usage.
     if: ${{ github.repository == 'newfold-labs/wp-plugin-blueprint' }}
+    timeout-minutes: 10
     steps:
 
       - name: Clear cache for release API
