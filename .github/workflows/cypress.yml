@@ -31,7 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read       # Required to clone the private repository.
-      actions: write       # Required for actions/cache and for conditional actions/upload-artifact uploads.
     timeout-minutes: 60
     steps:
 
