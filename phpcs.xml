@@ -5,6 +5,7 @@
     <config name="minimum_supported_wp_version" value="5.0"/>
     <exclude-pattern>/assets</exclude-pattern>
     <exclude-pattern>/build</exclude-pattern>
+    <exclude-pattern>/vendor-prefixed</exclude-pattern>
     <rule ref="WordPress-Core">
         <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
         <exclude name="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase"/>
