@@ -26,6 +26,24 @@
             "*": "dist"
         }
     },
+    "autoload": {
+        "psr-4": {
+            "NewfoldLabs\\WP\\Blueprint\\Dependencies\\": "vendor-prefixed/"
+        }
+    },
+    "extra": {
+        "mozart": {
+            "dep_namespace": "NewfoldLabs\\WP\\Blueprint\\Dependencies\\",
+            "dep_directory": "/vendor-prefixed/",
+            "classmap_directory": "/vendor-prefixed/",
+            "classmap_prefix": "WPPB_",
+            "packages": [
+                "doctrine/inflector"
+            ],
+            "delete_vendor_directories": false,
+            "generate_autoloader": false
+        }
+    },
     "repositories": {
         "newfold": {
             "type": "composer",
@@ -42,6 +60,7 @@
         "wp-phpunit/wp-phpunit": "^6.3.1"
     },
     "scripts": {
+        "mozart-compose": "tools/vendor/bin/mozart compose",
         "fix": "vendor/bin/phpcbf --standard=phpcs.xml .",
         "lint": "vendor/bin/phpcs --standard=phpcs.xml -s .",
         "i18n": [
@@ -50,6 +69,7 @@
         ]
     },
     "scripts-descriptions": {
+        "mozart-compose": "Prefix doctrine/inflector into vendor-prefixed/ to avoid conflicts with other plugins.",
         "fix": "Automatically fix coding standards issues where possible.",
         "lint": "Check files against coding standards.",
         "i18n": "Generate a .pot file for translation."

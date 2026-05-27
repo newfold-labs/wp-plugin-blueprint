@@ -1,0 +1,11 @@
+{
+    "name": "newfold-labs/wp-plugin-blueprint-tools",
+    "description": "Build tooling for wp-plugin-blueprint (not shipped with the plugin).",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "coenjacobs/mozart": "^1.2"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
